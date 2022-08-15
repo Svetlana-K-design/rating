@@ -1,5 +1,36 @@
 .choice__wrapper {
-    max-width: 1120px;
+    max-width: @desktop-width;
     margin: 0 auto;
-    padding: 24px 16px;
+    padding: 0 16px 24px;
+    text-align: center;
+
+    @media(min-width: @tablet-width) {
+        padding: 43px 80px;
+    }
+}
+
+.choice__title {
+    .title-h1();
+    margin: 0;
+    margin-bottom: 4px;
+}
+
+.choice__subtitle {
+    .title-h2-green();
+    margin: 0;
+    margin-bottom: 9px;
+}
+
+.choice__text {
+    line-height: 32px;
+    margin: 0;
+    margin-bottom: 14px;
+}
+
+.choise__button {
+    .button-green();
+    width: 100%;
+    padding: 10px 32px;
+    max-width: 448px;
+    margin: 0 auto;
 }
