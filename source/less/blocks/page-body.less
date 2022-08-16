@@ -2,6 +2,15 @@
   width: 100%;
   height: auto;
   position: relative;
+  background-image: url("../img/background-mobile-header.svg");
+  background-repeat: no-repeat;
+  background-position: 0 200px;
+  background-size: contain;
+
+  @media(min-width: @mobile-large) {
+    background-position: 0 100px;
+  background-size: 100% 260px;
+  }
 }
 
 .page-body.active:after {

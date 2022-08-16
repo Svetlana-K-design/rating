@@ -1,3 +1,14 @@
+.feedback {
+    background-image: url("../img/background-mobile-2.svg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: 0;
+  
+    @media(min-width: @mobile-large) {
+    background-size: 100% 150%;
+    }
+}
+
 .feedback__wrapper {
     max-width: @desktop-width;
     margin: 0 auto;
@@ -36,7 +47,7 @@
 }
 
 .feedback__input {
-  background-color: transparent;
+  background-color: @white-basic;
   border: 1px solid #8f8f8f  ;
   border-radius: 35px;
   padding: 8px 32px;
@@ -55,6 +66,18 @@
     padding: 16px 64px;
     margin-right: 24px;
   }
+}
+
+.feedback__input:hover {
+    box-shadow: 0px 4px 4px 0 rgba(113, 113, 113, 0.25);
+}
+
+.feedback__input:focus {
+    border-color: @decor-green;
+    box-shadow: 0px 4px 4px 0 rgba(113, 113, 113, 0.25);
+    outline: none;
+    -moz-outline: none;
+    -webkit-outline: none;
 }
 
 .feedback__button {
