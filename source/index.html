@@ -105,18 +105,19 @@
               </div>
               <div class="rating__item">
                 <h3 class="rating__subtitle rating__subtitle--intro">Оценка</h3>
-                <p class="rating__text">4.9</p>
+                <p class="rating__value">4.9</p>
               </div>
               <div class="rating__item">
                 <h3 class="rating__subtitle rating__subtitle--intro">Цены</h3>
-                <p class="rating__text">$$$</p>
+                <p class="rating__value">$$$</p>
               </div>
               <div class="rating__item">
                 <h3 class="rating__subtitle rating__subtitle--intro">Отзывы</h3>
-                <p class="rating__text">150 отзывов</p>
+                <p class="rating__value">150 отзывов</p>
               </div>
             </div>
-            <input class="rating__check" type="checkbox">
+            <input id="first-item" class="rating__check" type="checkbox">
+            <span class="rating__check-custom"></span>
           </div>
           <div class="rating__cell">
             <div class="rating__desk">
@@ -130,18 +131,19 @@
               </div>
               <div class="rating__item">
                 <h3 class="rating__subtitle rating__subtitle--intro">Оценка</h3>
-                <p class="rating__text">4.9</p>
+                <p class="rating__value">4.9</p>
               </div>
               <div class="rating__item">
                 <h3 class="rating__subtitle rating__subtitle--intro">Цены</h3>
-                <p class="rating__text">$$$</p>
+                <p class="rating__value">$$$</p>
               </div>
               <div class="rating__item">
                 <h3 class="rating__subtitle rating__subtitle--intro">Отзывы</h3>
-                <p class="rating__text">150 отзывов</p>
+                <p class="rating__value">150 отзывов</p>
               </div>
             </div>
-            <input class="rating__check" type="checkbox">
+            <input id="second-item" class="rating__check" type="checkbox">
+            <span class="rating__check-custom"></span>
           </div>
           <div class="rating__cell">
             <div class="rating__desk">
@@ -155,18 +157,19 @@
               </div>
               <div class="rating__item">
                 <h3 class="rating__subtitle rating__subtitle--intro">Оценка</h3>
-                <p class="rating__text">4.9</p>
+                <p class="rating__value">4.9</p>
               </div>
               <div class="rating__item">
                 <h3 class="rating__subtitle rating__subtitle--intro">Цены</h3>
-                <p class="rating__text">$$$</p>
+                <p class="rating__value">$$$</p>
               </div>
               <div class="rating__item">
                 <h3 class="rating__subtitle rating__subtitle--intro">Отзывы</h3>
-                <p class="rating__text">150 отзывов</p>
+                <p class="rating__value">150 отзывов</p>
               </div>
             </div>
-            <input class="rating__check" type="checkbox">
+            <input id="third-item" class="rating__check" type="checkbox">
+            <span class="rating__check-custom"></span>
           </div>
           <div class="rating__cell">
             <div class="rating__desk">
@@ -180,18 +183,19 @@
               </div>
               <div class="rating__item">
                 <h3 class="rating__subtitle rating__subtitle--intro">Оценка</h3>
-                <p class="rating__text">4.9</p>
+                <p class="rating__value">4.9</p>
               </div>
               <div class="rating__item">
                 <h3 class="rating__subtitle rating__subtitle--intro">Цены</h3>
-                <p class="rating__text">$$$</p>
+                <p class="rating__value">$$$</p>
               </div>
               <div class="rating__item">
                 <h3 class="rating__subtitle rating__subtitle--intro">Отзывы</h3>
-                <p class="rating__text">150 отзывов</p>
+                <p class="rating__value">150 отзывов</p>
               </div>
             </div>
-            <input class="rating__check" type="checkbox">
+            <input id="fourth-item" class="rating__check" type="checkbox">
+            <span class="rating__check-custom"></span>
           </div>
           <div class="rating__cell">
             <div class="rating__desk">
@@ -205,18 +209,19 @@
               </div>
               <div class="rating__item">
                 <h3 class="rating__subtitle rating__subtitle--intro">Оценка</h3>
-                <p class="rating__text">4.9</p>
+                <p class="rating__value">4.9</p>
               </div>
               <div class="rating__item">
                 <h3 class="rating__subtitle rating__subtitle--intro">Цены</h3>
-                <p class="rating-text">$$$</p>
+                <p class="rating__value">$$$</p>
               </div>
               <div class="rating__item">
                 <h3 class="rating__subtitle rating__subtitle--intro">Отзывы</h3>
-                <p class="rating__text">150 отзывов</p>
+                <p class="rating__value">150 отзывов</p>
               </div>
             </div>
-            <input class="rating__check" type="checkbox">
+            <input id="fifth-item" class="rating__check" type="checkbox">
+            <span class="rating__check-custom"></span>
           </div>
         </div>
         <button class="rating__button" type="buttun">Узнать больше</button>
@@ -227,8 +232,8 @@
         <h2 class="feedback__title">Необходима консультация в выборе компании?</h2>
         <form class="feedback__form">
           <label class="feedback__phone" for="phone">Мы вам перезвоним и ответим на все ваши вопросы</label>
-          <input type="tel" id="phone" name="phone" pattern="\+7\[0-9]{3}\s?\[0-9]{3}\s?\[0-9]{2}\s?\[0-9]{2}" required placeholder="+7(XХХ) ХХХ ХХ ХХ">
-          <button type="submit" class="button button--green">Перезвоните мне</button>
+          <input class="feedback__input" type="tel" id="phone" name="phone" pattern="\+7\[0-9]{3}\s?\[0-9]{3}\s?\[0-9]{2}\s?\[0-9]{2}" required placeholder="+7(XХХ) ХХХ ХХ ХХ">
+          <button type="submit" class="feedback__button">Перезвоните мне</button>
         </form>
       </div>
     </section>
@@ -269,6 +274,7 @@
   </footer>
   <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
   <script src="js/menu.min.js"></script>
 </body>
 </html>

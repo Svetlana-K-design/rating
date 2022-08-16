@@ -1,7 +1,7 @@
 .rating__wrapper {
     max-width: @desktop-width;
     margin: 0 auto;
-    padding: 24px 16px;
+    padding: 39px 16px;
     text-align: center;
 
     @media(min-width: @tablet-width) {
@@ -17,12 +17,14 @@
 
 .rating__subtitle {
     display: none;
+    .list-reset();
     font-size: 16px;
     line-height: 22px;
     font-weight: 600;
     letter-spacing: 0.02em;
     color: @table-title;
     margin: 0;
+    margin-bottom: 11px;
 
     @media(min-width: @tablet-width) {
         display: flex;
@@ -32,6 +34,7 @@
 
 .rating__subtitle--intro {
     display: block;
+    margin: 0;
 
     @media(min-width: @tablet-width) {
         display: none;
@@ -43,7 +46,8 @@
     padding: 15px 22px;
     border-radius: 4px;
     box-sizing: border-box;
-    box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.25), 0px 0px 16px rgba(45, 45, 45, 0.1);
+    margin-bottom: 24px;
 }   
 
 .rating__cell {
@@ -67,9 +71,10 @@
 .rating__item {
     margin-bottom: 9px;
 
-    &:last-of-type {
-        margin-bottom: 0;
-       }
+    @media(min-width: @mobile-large) {
+        display: flex;
+        column-gap: 11px;
+    }
 }
 
 .rating__company-name {
@@ -81,7 +86,61 @@
     margin: 0;
 }
 
-.rating__text p {
+.rating__text p, 
+.rating__value {
     margin: 0;
 }
+
+.rating__button {
+    .button-transparent();
+    width: 100%;
+    padding: 10px 32px;
+    margin: 0 auto;
+
+    @media(min-width: @mobile-large) {
+        max-width: 216px;
+    }
+
+    @media(min-width: @tablet-width) {
+        max-width: 320px;
+    }
+
+    @media(min-width: @tablet-large) {
+        max-width: 296px;
+    }
+
+    @media(min-width: @desktop-width) {
+        max-width: 320px;
+    }
+}
+
+//Checkbox
+
+.rating__check {
+    appearance: none;
+}
+
+.rating__check-custom {
+    display: block;
+    width: 24px;
+    height: 24px;
+    border: 1px solid #8f8f8f;
+    background-color: @white-basic;
+    border-radius: 2px;
+    box-sizing: border-box;
+    cursor: pointer;
+
+    @media(min-width: @mobile-large) {
+        align-self: center;
+    }
+}
+
+
+.rating__check:checked + .rating__check-custom {
+    background-image: url("../img/check.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: @white-basic;
+}
+
 

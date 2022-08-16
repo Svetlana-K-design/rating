@@ -1,0 +1,82 @@
+.feedback__wrapper {
+    max-width: @desktop-width;
+    margin: 0 auto;
+    padding: 39px 16px 104px;
+    text-align: center;
+
+    @media(min-width: @tablet-width) {
+        padding: 48px 24px;
+    }
+}
+
+.feedback__title {
+    .title-h2();
+    margin: 0;
+    margin-bottom: 6px;
+
+    @media(min-width: @tablet-width) {
+        margin-bottom: 18px;
+    }
+}
+
+.feedback__phone {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 800;
+    color: @decor-green;
+    margin-bottom: 18px;
+
+    @media(min-width: @tablet-width) {
+        font-size: 24px;
+        line-height: 33px;
+        width: 100%;
+        margin: 0 48px 40px;
+    }
+}
+
+.feedback__input {
+  background-color: transparent;
+  border: 1px solid #8f8f8f  ;
+  border-radius: 35px;
+  padding: 8px 32px;
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 23px;
+
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  color: @color-title;
+
+  @media(min-width: @tablet-width) {
+    margin-bottom: 0;
+    width: calc(62% - 24px);
+    padding: 16px 64px;
+    margin-right: 24px;
+  }
+}
+
+.feedback__button {
+    .button-green();
+    width: 100%;
+    margin: 0 auto;
+
+    @media(min-width: @mobile-large) {
+        width: 216px;
+    }
+
+    @media(min-width: @tablet-width) {
+        width: 38%;
+        margin: 0;
+    }
+}
+
+//Flex Table 
+.feedback__form {
+    @media(min-width: @tablet-width) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

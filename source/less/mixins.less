@@ -9,7 +9,7 @@
   background-color: transparent;
   border: 2px solid @color-title;
   border-radius: 35px;
-  padding: 13px;
+  padding: 10px;
   box-sizing: border-box;
 
   font-size: 16px;
@@ -21,6 +21,10 @@
 
   text-align: center;
   cursor: pointer;
+
+  @media(min-width: @tablet-width) {
+    padding: 21px;
+  }
 }
 
 .button-green() {
