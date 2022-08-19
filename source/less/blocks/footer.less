@@ -12,42 +12,70 @@
     height: 1px;
     background-color: @white-basic;
     left: 0;
-    bottom: 60px;
+    bottom: 56px;
 
     @media (min-width: @tablet-width) {
-      bottom: 68px;
+      bottom: 80px;
+    }
+
+    @media(min-width: @desktop-width) {
+      left: 50%;
+      margin-left: -576px;
+      max-width: @desktop-width;
     }
   }
 }
 
 .footer__wrapper {
-  max-width: 733px;
+  max-width: @desktop-width;
   margin: 0 auto;
   padding: 55px 16px 19px;
   text-align: center;
 
   @media (min-width: @mobile-large) {
-    text-align: left;
+    text-align: left; 
+  }
+  
+  @media (min-width: @tablet-width) {
+    padding: 97px 24px 27px;  
+  }
+
+  @media(min-width: @desktop-width) {
+    padding: 196px 24px 27px;
+  }
+}
+
+.footer__flex {
+  @media (min-width: @mobile-large) {
     display: flex;
     flex-wrap: wrap;
     column-gap: 60px;
   }
-  
+
   @media (min-width: @tablet-width) {
-    padding: 97px 24px 27px;
     justify-content: space-between;
     column-gap: 0;
   }
 
-  @media (min-width: @desktop-width) {
-    max-width: 961px;
+  @media (min-width: @tablet-large) {
+    padding: 0 118px 0 83px;
+  }
+
+  @media(min-width: @desktop-width) {
+    @media (min-width: @tablet-large) {
+      padding: 0 97px;
+    }
   }
 }
 
 .footer__logo {
   display: block;
-  margin-bottom: 38px;
+  margin-bottom: 32px;
   width: 100%;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 57px;
+  }
 }
 
 .footer__logo-img {
@@ -62,11 +90,29 @@
   font-weight: 800;
   margin: 0;
   margin-bottom: 10px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 24px;
+    line-height: 33px;
+    margin-bottom: 14px;
+  }
 }
 
 .footer__list,
 .footer__item {
   .list-reset();
+}
+
+.footer__item {
+  margin-bottom: 7px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @tablet-large) {
+    margin-bottom: 8px;
+  }
 }
 
 .footer__link {
@@ -78,6 +124,18 @@
 
 .footer__nav {
   margin-bottom: 50px;
+
+  &:last-of-type {
+    margin-bottom: 44px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 101px;
+  }
+
+  @media(min-width: @desktop-width) {
+    margin-bottom: 196px;
+  }
 }
 
 .footer__copyright {

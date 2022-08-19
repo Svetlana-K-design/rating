@@ -5,7 +5,15 @@
     text-align: center;
 
     @media(min-width: @tablet-width) {
-        padding: 43px 80px;
+        padding: 150px 80px 160px;
+    }
+
+    @media(min-width: @tablet-large) {
+        padding: 68px 100px 158px;
+    }
+
+    @media (min-width: @desktop-width) {
+        padding: 204px 100px 190px;
     }
 }
 
@@ -19,18 +27,52 @@
     .title-h2-green();
     margin: 0;
     margin-bottom: 9px;
+
+    @media(min-width: @tablet-width) {
+        margin-bottom: 37px;
+    }
+
+    @media(min-width: @tablet-large) {
+        margin-bottom: 17px;
+    }
+
+    @media (min-width: @desktop-width) {
+        margin-bottom: 39px;
+    }
 }
 
 .choice__text {
     line-height: 32px;
     margin: 0;
     margin-bottom: 14px;
+
+    @media(min-width: @tablet-width) {
+        margin-bottom: 85px;
+    }
+
+    @media(min-width: @tablet-large) {
+        margin-bottom: 45px;
+    }
+
+    @media (min-width: @desktop-width) {
+        font-size: 24px;
+        line-height: 40px;
+        margin-bottom: 87px;
+
+        span {
+            display: block;
+        }
+    }
 }
 
-.choise__button {
+.choice__button {
     .button-green();
     width: 100%;
     padding: 10px 32px;
     max-width: 448px;
     margin: 0 auto;
+
+    @media (min-width: @desktop-width) {
+        max-width: 466px;
+    }
 }

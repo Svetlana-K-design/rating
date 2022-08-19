@@ -19,7 +19,7 @@
     }
 
     @media(min-width: @desktop-width) {
-        margin-right: 24px;
+        margin-right: 22px;
         margin-bottom: 0;
 
         &:last-child {
@@ -28,22 +28,15 @@
     }
 }
 
-.navigation__item:first-child,
-.navigation__item:nth-child(2) {
-    position: relative;
-}
-
-.navigation__item:first-child::after,
-.navigation__item:nth-child(2)::after {
-    content: "";
-    position: absolute;
-    right: -10px;
-    top: 50%;
-    width: 8px;
-    height: 4px;
+.navigation__btn {
+    display: inline-block;
+    width: 12px;
+    height: 9px;
     background-image: url("../img/arrow.svg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: top;
+    cursor: pointer;
 }
 
 
@@ -60,4 +53,5 @@
     line-height: 24px;
     font-weight: 700;
     color: @color-text;
+    padding: 8px 3px 8px 8px;
 }

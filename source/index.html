@@ -24,7 +24,7 @@
           <ul class="navigation__list navigation__list--closed">
             <li class="navigation__item">
               <a class="navigation__link" href="#">Рейтинги</a>
-              <span class="navigation__arrow"></span>
+              <span class="navigation__btn"></span>
               <ul class="navigation__sub-list">
                 <li></li>
                 <li></li>
@@ -32,14 +32,14 @@
             </li>
             <li class="navigation__item">
               <a class="navigation__link" href="#">Сравнить</a>
-              <span class="navigation__arrow"></span>
+              <span class="navigation__btn"></span>
               <ul class="navigation__sub-list">
                 <li></li>
                 <li></li>
               </ul>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link" href="#">Как выбрать</a>
+              <a class="navigation__link" href="article.html"  target = "_blank">Как выбрать</a>
             </li>
             <li class="navigation__item">
               <a class="navigation__link" href="#">О нас</a>
@@ -54,10 +54,10 @@
       <div class="choice__wrapper">
         <h1 class="choice__title">Собираетесь делать ремонт?</h1>
         <h2 class="choice__subtitle">Мы хотим помочь вам сделать выбор компании</h2>
-        <p class="choice__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+        <p class="choice__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor <span>incididunt ut labore et
           dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
-        <button class="choise__button">Выбрать лучшую компанию</button>
+          magna aliqua. Ut enim ad minim veniam, quis nostrud.</span></p>
+        <button class="choice__button">Выбрать лучшую компанию</button>
       </div>
     </section>
     <section class="company">
@@ -79,7 +79,7 @@
           mollit
           anim id est laborum.
         </p>
-        <button class="company__button" type="buttun">Узнать больше</button>
+        <button class="company__button" type="button">Узнать больше</button>
       </div>
     </section>
     <section class="rating">
@@ -117,7 +117,7 @@
               </div>
             </div>
             <input id="first-item" class="rating__check" type="checkbox">
-            <label class="rating__check-custom" for="first-item"></lable>
+            <label class="rating__check-custom" for="first-item"></label>
           </div>
           <div class="rating__cell">
             <div class="rating__desk">
@@ -135,7 +135,7 @@
               </div>
               <div class="rating__item">
                 <h3 class="rating__subtitle rating__subtitle--intro">Цены</h3>
-                <p class="rating__value">$$$</p>
+                <p class="rating__value">$$$$</p>
               </div>
               <div class="rating__item">
                 <h3 class="rating__subtitle rating__subtitle--intro">Отзывы</h3>
@@ -143,7 +143,7 @@
               </div>
             </div>
             <input id="second-item" class="rating__check" type="checkbox">
-            <label class="rating__check-custom" for="second-item"></lable>
+            <label class="rating__check-custom" for="second-item"></label>
           </div>
           <div class="rating__cell">
             <div class="rating__desk">
@@ -169,7 +169,7 @@
               </div>
             </div>
             <input id="third-item" class="rating__check" type="checkbox">
-            <label class="rating__check-custom" for="third-item"></lable>
+            <label class="rating__check-custom" for="third-item"></label>
           </div>
           <div class="rating__cell">
             <div class="rating__desk">
@@ -195,7 +195,7 @@
               </div>
             </div>
             <input id="fourth-item" class="rating__check" type="checkbox">
-            <label class="rating__check-custom" for="fourth-item"></lable>
+            <label class="rating__check-custom" for="fourth-item"></label>
           </div>
           <div class="rating__cell">
             <div class="rating__desk">
@@ -221,15 +221,15 @@
               </div>
             </div>
             <input id="fifth-item" class="rating__check" type="checkbox">
-            <label class="rating__check-custom" for="fifth-item"></lable>
+            <label class="rating__check-custom" for="fifth-item"></label>
           </div>
         </div>
-        <button class="rating__button" type="buttun">Узнать больше</button>
+        <button class="rating__button" type="button">Узнать больше</button>
       </div>
     </section>
     <section class="feedback">
       <div class="feedback__wrapper">
-        <h2 class="feedback__title">Необходима консультация в выборе компании?</h2>
+        <h2 class="feedback__title">Необходима консультация в <span class="feedback__br-tablet">выборе <span class="feedback__br-desktop">компании?</span></span></h2>
         <form class="feedback__form">
           <label class="feedback__phone" for="phone">Мы вам перезвоним и ответим на все ваши вопросы</label>
           <input class="feedback__input" type="tel" id="phone" name="phone" pattern="\+7\[0-9]{3}\s?\[0-9]{3}\s?\[0-9]{2}\s?\[0-9]{2}" required placeholder="+7(XХХ) ХХХ ХХ ХХ">
@@ -241,6 +241,7 @@
   <footer class="footer">
     <div class="footer__wrapper">
       <h2 class="visually-hidden">Навигация по сайту и полезная информация о выборе компании</h2>
+      <div class="footer__flex">
       <div class="footer__nav">
         <h3 class="footer__subtitle">Рейтинг</h3>
         <ul class="footer__list">
@@ -260,7 +261,7 @@
       <div class="footer__nav">
         <h3 class="footer__subtitle">Статьи</h3>
         <ul class="footer__list">
-          <li class="footer__item"><a class="footer__link" href="#" target="_blank">Как выбрать</a></li>
+          <li class="footer__item"><a class="footer__link" href="article.html" target="_blank">Как выбрать</a></li>
           <li class="footer__item"><a class="footer__link" href="#" target="_blank">Компании</a></li>
           <li class="footer__item"><a class="footer__link" href="#" target="_blank">О нас</a></li>
         </ul>
@@ -270,6 +271,7 @@
           title="Логотип сайта - Рейтинг">
       </a>
       <p class="footer__copyright">© Рейтинг Ремонта 2020</p>
+      </div>
     </div>
   </footer>
   <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>

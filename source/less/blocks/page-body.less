@@ -4,12 +4,48 @@
   position: relative;
   background-image: url("../img/background-mobile-header.svg");
   background-repeat: no-repeat;
-  background-position: 0 200px;
+  background-position: 0 100px;
   background-size: contain;
 
   @media(min-width: @mobile-large) {
-    background-position: 0 100px;
-  background-size: 100% 260px;
+    background-size: 100% 260px;
+  }
+
+  @media(min-width: @tablet-width) {
+    background-position: 0 148px;
+    background-size: 100%;
+    background-image: url("../img/background-tablet-header.svg");
+  }  
+
+  @media(min-width: @tablet-large) {
+    background-position: 0 186px;
+    background-image: url("../img/background-tl-header.svg");
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/background-desk-header.svg");
+  }
+
+  &--article {
+    background-image: url("../img/background-tablet-header.svg");
+    background-size: 110%;
+    background-position: 0 119px;
+
+    @media(min-width: @mobile-large) {
+      background-image: url("../img/background-desk-header.svg");
+      background-size: 125%;
+      background-position: 0 74px;
+    }
+
+    @media(min-width: @tablet-width) {
+      background-size: 100%;
+      background-position: 0 220px;
+      background-image: url("../img/background-tablet-header.svg");
+    }
+
+    @media(min-width: @tablet-large) {
+      background-image: url("../img/background-desk-header.svg");
+    }
   }
 }
 
