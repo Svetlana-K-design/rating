@@ -1,0 +1,207 @@
+.onboarding__wrapper {
+    max-width: 956px;
+    margin: 0 auto;
+    padding: 10px 16px 58px;
+    text-align: left;
+
+    @media(min-width: @mobile-large) {
+        padding: 14px 16px 86px;
+    }
+
+    @media(min-width: @tablet-width) {
+        padding: 141px 24px 191px;
+    }
+
+    @media(min-width: @tablet-large) {
+        padding: 92px 105px 195px;
+    }
+
+    @media(min-width: @desktop-width) {
+        padding: 205px 105px 188px;
+    }
+}
+
+.onboarding__title {
+    .title-h2();
+    margin: 0;
+
+    @media(min-width: @tablet-width) {
+            margin-bottom: 39px;
+    }
+}
+
+.onboarding__desc {
+    font-size: 16px;
+    line-height: 32px;
+    margin: 0;
+    margin-bottom: 12px;
+}
+
+.onboarding__form {
+    padding: 0;
+}
+
+.onboarding__item {
+    border: none;
+    padding: 0;
+}
+
+.onboarding__input {
+  background-color: @white-basic;
+  border: 1px solid #8f8f8f  ;
+  border-radius: 35px;
+  padding: 12px 38px;
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 24px;
+
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 400;
+  color: @color-title;
+
+  @media(min-width: @tablet-width) {
+    margin-bottom: 51px;
+    width: 80%;
+    padding: 16px 38px;
+  }
+
+  @media(min-width: @tablet-large) {
+    width: 70%;
+  }
+
+  @media(min-width: @desktop-width) {
+    width: 60%;
+  }
+}
+
+.onboarding__input:hover {
+    box-shadow: 0px 4px 4px 0 rgba(113, 113, 113, 0.25);
+}
+
+.onboarding__input:focus {
+    border-color: @decor-green;
+    box-shadow: 0px 4px 4px 0 rgba(113, 113, 113, 0.25);
+    outline: none;
+    -moz-outline: none;
+    -webkit-outline: none;
+}
+
+.onboarding__input--small {
+    @media(min-width: @mobile-large) {
+        display: none;
+    }
+}
+
+.onboarding__input--large {
+    display: none;
+
+    @media(min-width: @mobile-large) {
+        display: block;
+    }
+}
+
+
+
+//Button
+.onboarding__btn-block,
+.onboarding__decor {
+   display: none;
+}
+
+.onboarding__btn-prev {
+    .button-transparent();
+    border: 1px solid @color-title;
+    width: 100%;
+    margin: 0 auto 24px;
+    padding: 17px;
+
+    @media(min-width: @mobile-large) {
+        max-width: 152px;
+        margin: 0;
+        padding: 16px;
+    }
+}
+
+.onboarding__btn-next {
+    .button-green();
+    width: 100%;
+    margin: 0 auto;
+    padding: 17px;
+
+    @media(min-width: @mobile-large) {
+        max-width: 168px;
+        margin: 0;
+        padding: 16px;
+    }
+}
+//Checked
+.onboarding__btn-block.checked {
+    display: block;
+
+    @media(min-width: @mobile-large) {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    @media(min-width: @tablet-width) {
+        width: 80%;
+      }
+    
+      @media(min-width: @tablet-large) {
+        width: 70%;
+      }
+    
+      @media(min-width: @desktop-width) {
+        width: 60%;
+      }
+}
+
+.onboarding__input-block {
+    position: relative;
+}
+
+.onboarding__decor.checked {
+    content: "Сумма";
+    position: absolute;
+    display: block;
+    width: 86px;
+    height: 38px;
+    left: 0;
+    top: calc(50% - 31px);
+    background-color: @decor-green;
+    border-radius: 20px;
+    box-sizing: border-box;
+
+    padding: 8px 16px;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 600;
+    color: @white-basic;
+
+    @media(min-width: @mobile-large) {
+        top: calc(50% - 19px);
+    }
+
+}
+
+.onboarding__input.checked {
+    margin-left: 50px;
+    width: calc(100% - 30px);
+
+    &::placeholder {
+        font-size: 0;
+    }
+
+    @media(min-width: @tablet-width) {
+        width: calc(80% - 30px);
+      }
+    
+      @media(min-width: @tablet-large) {
+        width: calc(70% - 30px);
+      }
+    
+      @media(min-width: @desktop-width) {
+        width: calc(60% - 30px);
+      }
+}
