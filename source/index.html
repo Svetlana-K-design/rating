@@ -22,24 +22,26 @@
         <button class="header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <nav class="header__navigation navigation">
           <ul class="navigation__list navigation__list--closed">
-            <li class="navigation__item">
-              <a class="navigation__link" href="#">Рейтинги</a>
+            <li class="navigation__item navigation__dropdown">
+              <a class="navigation__link">Рейтинги</a>
               <span class="navigation__btn"></span>
               <ul class="navigation__sub-list">
-                <li></li>
-                <li></li>
+                <li><a>Топ по надежности</a></li>
+                <li><a href="rating.html">Топ компаний</a></li>
+                <li><a>Создать свой рейтинг</a></li>
+              </ul>
+            </li>
+            <li class="navigation__item navigation__dropdown">
+              <a class="navigation__link">Сравнить</a>
+              <span class="navigation__btn"></span>
+              <ul class="navigation__sub-list">
+                <li><a href="#">Сравнить компании</a></li>
+                <li><a href="#">Сравнить все</a></li>
+                <li><a href="#">Выбрать для сравнения</a></li>  
               </ul>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link" href="#">Сравнить</a>
-              <span class="navigation__btn"></span>
-              <ul class="navigation__sub-list">
-                <li></li>
-                <li></li>
-              </ul>
-            </li>
-            <li class="navigation__item">
-              <a class="navigation__link" href="article.html"  target = "_blank">Как выбрать</a>
+              <a class="navigation__link" href="article.html">Как выбрать</a>
             </li>
             <li class="navigation__item">
               <a class="navigation__link" href="#">О нас</a>
@@ -57,19 +59,13 @@
         <p class="choice__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor <span>incididunt ut labore et
           dolore
           magna aliqua. Ut enim ad minim veniam, quis nostrud.</span></p>
-        <button class="choice__button">Выбрать лучшую компанию</button>
+        <a class="choice__button">Выбрать лучшую компанию</a>
       </div>
     </section>
     <section class="company">
       <div class="company__wrapper">
+        <div class="company__flex-column">
         <h2 class="company__title">Лучшая компания</h2>
-        <a class="company__link" href="#" target="_blank">
-          <picture>
-            <source type="image/webp" srcset="img/logo-studia.webp 1x, img/logo-studia@2x.webp 2x" />
-            <img class="company__logo" src="img/logo-studia.png" srcset="img/logo-studia@2x.png 2x"
-              alt="Логотип компании Студия ремонта" title="Логотип компании Студия ремонта" />
-          </picture>
-        </a>
         <p class="company__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
           dolore
           magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
@@ -79,7 +75,11 @@
           mollit
           anim id est laborum.
         </p>
-        <button class="company__button" type="button">Узнать больше</button>
+        <a class="company__button" type="button">Узнать больше</a>
+      </div>
+      <a class="company__link" href="#" target="_blank">
+        <img class="company__logo" src="img/logo-studia.svg" alt="Логотип компании Студия ремонта" title="Логотип компании Студия ремонта" />
+    </a>
       </div>
     </section>
     <section class="rating">
@@ -224,7 +224,7 @@
             <label class="rating__check-custom" for="fifth-item"></label>
           </div>
         </div>
-        <button class="rating__button" type="button">Узнать больше</button>
+        <a class="rating__button" type="button">Узнать больше</a>
       </div>
     </section>
     <section class="feedback">
@@ -245,25 +245,25 @@
       <div class="footer__nav">
         <h3 class="footer__subtitle">Рейтинг</h3>
         <ul class="footer__list">
-          <li class="footer__item"><a class="footer__link" href="#" target="_blank">Топ по надежности</a></li>
-          <li class="footer__item"><a class="footer__link" href="#" target="_blank">Топ компаний</a></li>
-          <li class="footer__item"><a class="footer__link" href="#" target="_blank">Создать свой рейтинг</a></li>
+          <li class="footer__item"><a class="footer__link" href="#">Топ по надежности</a></li>
+          <li class="footer__item"><a class="footer__link" href="rating.html">Топ компаний</a></li>
+          <li class="footer__item"><a class="footer__link" href="#">Создать свой рейтинг</a></li>
         </ul>
       </div>
       <div class="footer__nav">
         <h3 class="footer__subtitle">Сравнить</h3>
         <ul class="footer__list">
-          <li class="footer__item"><a class="footer__link" href="#" target="_blank">Сравнить компании</a></li>
-          <li class="footer__item"><a class="footer__link" href="#" target="_blank">Сравнить все</a></li>
-          <li class="footer__item"><a class="footer__link" href="#" target="_blank">Выбрать для сравнения</a></li>
+          <li class="footer__item"><a class="footer__link" href="#">Сравнить компании</a></li>
+          <li class="footer__item"><a class="footer__link" href="#">Сравнить все</a></li>
+          <li class="footer__item"><a class="footer__link" href="#">Выбрать для сравнения</a></li>
         </ul>
       </div>
       <div class="footer__nav">
         <h3 class="footer__subtitle">Статьи</h3>
         <ul class="footer__list">
-          <li class="footer__item"><a class="footer__link" href="article.html" target="_blank">Как выбрать</a></li>
-          <li class="footer__item"><a class="footer__link" href="#" target="_blank">Компании</a></li>
-          <li class="footer__item"><a class="footer__link" href="#" target="_blank">О нас</a></li>
+          <li class="footer__item"><a class="footer__link" href="article.html">Как выбрать</a></li>
+          <li class="footer__item"><a class="footer__link" href="#">Компании</a></li>
+          <li class="footer__item"><a class="footer__link" href="#">О нас</a></li>
         </ul>
       </div>
       <a class="footer__logo" href="#top">

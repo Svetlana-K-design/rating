@@ -3,21 +3,37 @@
     margin: 0 auto;
     padding: 39px 16px;
     text-align: center;
+    position: relative;
+
 
     @media(min-width: @tablet-width) {
-        text-align: left;
-        vertical-align: top;
+        display: flex;
         padding: 0 24px;
+        justify-content: space-between;
+        
+    }
+}
+
+.company__flex-column {
+    display: flex;
+    flex-direction: column;
+
+    @media(min-width: @tablet-width) {
+        max-width: 49%;
+        text-align: left;
     }
 }
 
 .company__title {
     .title-h2();
     margin: 0;
-    margin-bottom: 17px;
+    margin-bottom: 292px;
+
+    @media(min-width: @mobile-large) {
+        margin-bottom: 228px;
+    }
 
     @media(min-width: @tablet-width) {
-        max-width: 50%;
         margin-bottom: 25px;
     }
 
@@ -26,7 +42,6 @@
     }
 
     @media(min-width: @desktop-width) {
-        max-width: 49%;
         margin-bottom: 39px;
     }
 }
@@ -38,17 +53,16 @@
     text-align: left;
 
     @media(min-width: @tablet-width) {
-        max-width: 50%;
         margin-bottom: 28px;
     }
 
     @media(min-width: @tablet-large) {
         margin-bottom: 20px;
+        
     }
 
     @media(min-width: @desktop-width) {
-        max-width: 49%;
-        margin-bottom: 34px;
+        margin-bottom: 35px;
     }
 }
 
@@ -71,41 +85,39 @@
     }
 }
 
+
 .company__logo {
-    width: 288px;
-    height: auto;
-
-    @media(min-width: @mobile-large) {
-        width: 216px;
-    }
-
-    @media(min-width: @tablet-width) {
-        width: 323px;
-    }
-
-    @media(min-width: @tablet-large) {
-        width: 452px;
-    }
-
-    @media(min-width: @desktop-width) {
-        width: 563px;
-    }
+    display: block;
 }
 
 .company__link {
     display: block;
-    margin-bottom: 6px;
+    width: 288px;
+    top: 89px;
+    left: calc(50% - 144px);
+    position: absolute;
+
+    @media(min-width: @mobile-large) {
+        width: 216px;
+        top: 90px;
+        left: calc(50% - 112px);
+    }
 
     @media(min-width: @tablet-width) {
-        float: right;
-        margin-top: -129px;
+        min-width: 323px;
+        max-width: 50%;
+        height: auto;
+        margin: 0;
+        position: static;
     }
 
     @media(min-width: @tablet-large) {
-        margin-top: -72px;
+        min-width: 452px;
+        align-self: center;
     }
 
     @media(min-width: @desktop-width) {
-        margin-top: -141px;
+        width: 563px;
+        margin-top: -50px;
     }
 }

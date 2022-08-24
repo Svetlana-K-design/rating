@@ -35,7 +35,7 @@
         margin-bottom: 87px;
     }
 
-    @media(min-width: @desktop-width)  {
+    @media(min-width: @desktop-width) {
         margin-bottom: 175px;
     }
 }
@@ -43,7 +43,15 @@
 .article__subtitle {
     .title-h2();
     margin: 0;
-    display: inline;
+    margin-bottom: 20px;
+
+
+    &::before {
+        content: counter(Mycounter, upper-roman) ".";
+        .title-h2();
+        counter-increment: Mycounter;
+        padding-right: 6px;
+    }
 
     &--conclution {
         margin-bottom: 20px;
@@ -51,11 +59,13 @@
     }
 
     @media(min-width: @tablet-width) {
-        &--conclution {
             margin-bottom: 39px;
-        }
     }
 }
+
+.article__subtitle--conclution::before  {
+    display: none;
+} 
 
 .article__title-inner {
     font-size: 16px;
@@ -65,7 +75,7 @@
     display: inline;
     margin: 0;
 }
-  
+
 .article__text {
     line-height: 32px;
     margin: 0;
@@ -82,24 +92,13 @@
         display: inline;
     }
 
-    &--30t {
-        margin-top: 35px;
-    }
-
-    &--35tb,
-    &--35t {
-        margin: 35px 0 31px;
-    }
-
-    @media(min-width: @mobile-large) {
-        &--35t {
-            margin: 35px 0 0;
-        }
+    &--35b {
+        margin-bottom: 35px;
     }
 }
 
 //Article__item - text - different margins
-.article__item >.article__text {
+.article__item>.article__text {
     margin-bottom: 30px;
 
     @media(min-width: @tablet-width) {
@@ -107,42 +106,24 @@
     }
 }
 
-.article__item >.article__text:last-of-type {
+.article__item>.article__text:last-of-type {
     margin-bottom: 0;
 }
 
-.article__item > .article__text:first-of-type {
-    margin-top: 20px;
-
-    @media(min-width: @tablet-width) {
-        margin-top: 39px;
-    }
-}
-
-.article__item:nth-child(2) > .article__text:first-of-type {
-    margin-top: 24px;
+.article__item:nth-child(2)>.article__text:first-of-type {
     margin-bottom: 33px;
-
-    @media(min-width: @tablet-width) {
-        margin-top: 37px;
-    }
 }
 
-.article__item:nth-child(3) > .article__text:nth-of-type(2) {
+.article__item:nth-child(3)>.article__text:nth-of-type(2) {
     margin-bottom: 0;
 }
 
-.article__item:nth-child(3) > .article__text:nth-of-type(3) {
+.article__item:nth-child(3)>.article__text:nth-of-type(3) {
     margin-bottom: 30px;
 }
 
-.article__item:last-child > .article__text:first-of-type {
-    margin-top: 24px;
+.article__item:last-child>.article__text:first-of-type {
     margin-bottom: 34px;
-
-    @media(min-width: @tablet-width) {
-        margin-top: 40px;
-    }
 }
 
 
@@ -156,40 +137,81 @@
 .article__list-point,
 .article__item-point,
 .article__item-review,
-.article__list-review  {
+.article__list-review {
     padding: 0;
     margin: 0;
 }
 
+.article__list {
+    list-style: none;
+    counter-reset: Mycounter;
+
+}
+
 .article__item {
     margin-bottom: 20px;
-    list-style-position: inside;
 
     @media(min-width: @tablet-width) {
         margin-bottom: 40px;
     }
 }
 
-.article__item::marker {
-    .title-h2();
-    list-style-type: upper-roman;
-}
-
-.article__item-inner::marker,
-.article__item-review::marker {
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 32px;
-    color: @color-title;
-}
-
 .article__item-inner {
     margin-bottom: 31px;
     list-style-position: inside;
 
+    &::marker {
+        font-size: 16px;
+        line-height: 32px;
+        font-weight: 700;
+        color: @color-title;
+    }
+
     &:last-child {
         margin-bottom: 0;
     }
+}
+
+.article__item-review {
+    list-style-position: inside;
+
+    &::marker {
+        font-size: 16px;
+        line-height: 32px;
+        font-weight: 700;
+        color: @color-title;
+    }
+}
+
+.article__list-inner--review .article__item-inner:nth-child(3),
+.article__list-inner--review .article__item-inner:nth-child(7) {
+    list-style: none;
+}
+
+.article__item-inner {
+    counter-reset: Mycounter-inner;
+}
+
+.article__counter {
+    margin-bottom: 35px;
+
+    &--last {
+        margin-bottom: 0;
+    }
+}
+
+.article__counter::before {
+    content: counter(Mycounter-inner) ".";
+    counter-increment: Mycounter-inner 3;
+    font-size: 16px;
+    line-height: 32px;
+    font-weight: 700;
+    color: @color-title;
+    padding-right: 6px;
+}
+
+.article__counter--last::before {
+    counter-increment: Mycounter-inner 7;
 }
 
 .article__list-point {

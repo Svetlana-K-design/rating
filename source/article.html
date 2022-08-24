@@ -22,20 +22,22 @@
                 <button class="header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
                 <nav class="header__navigation navigation">
                     <ul class="navigation__list navigation__list--closed">
-                        <li class="navigation__item">
-                            <a class="navigation__link" href="#">Рейтинги</a>
+                        <li class="navigation__item navigation__dropdown">
+                            <a class="navigation__link">Рейтинги</a>
                             <span class="navigation__btn"></span>
                             <ul class="navigation__sub-list">
-                                <li></li>
-                                <li></li>
+                                <li><a  href="#">Топ по надежности</a></li>
+                                <li><a href="rating.html">Топ компаний</a></li>
+                                <li><a href="#">Создать свой рейтинг</a></li>
                             </ul>
                         </li>
-                        <li class="navigation__item">
-                            <a class="navigation__link" href="#">Сравнить</a>
+                        <li class="navigation__item navigation__dropdown">
+                            <a class="navigation__link">Сравнить</a>
                             <span class="navigation__btn"></span>
                             <ul class="navigation__sub-list">
-                                <li></li>
-                                <li></li>
+                                <li><a href="#">Сравнить компании</a></li>
+                                <li><a href="#">Сравнить все</a></li>
+                                <li><a href="#">Выбрать для сравнения</a></li>    
                             </ul>
                         </li>
                         <li class="navigation__item">
@@ -72,7 +74,7 @@
                             снизить вероятность поверить купленному отзыву - научитесь самостоятельно определять фейки.
                         </p>
                         <p class="article__text">Что может выдать купленные отзывы:</p>
-                        <ol class="article__list-inner">
+                        <ol class="article__list-inner article__list-inner--review">
                             <li class="article__item-inner article__text">Несколько похожих отзывов рядом. Это происходит из-за одного
                                 и того же ТЗ на написание отзыва. Особое внимание обратите на дату публикации –
                                 аномально много отзывов за один день признак накрутки.
@@ -83,7 +85,7 @@
                                 случае&nbsp;будут сильно затянуты, а качество будет не на пять звёзд.
                             </li>
                             <li class="article__item-inner">
-                                    <p class="article__text article__text--review">Отсутствие подробностей. Купленный отзыв будет содержать общие
+                                <p class="article__text article__counter">Отсутствие подробностей. Купленный отзыв будет содержать общие
                                     формулировки, которые подходят ко всем товарам: данная модель, эта компания, низкие
                                     цены и т.п.</p>
                                 <div class="article__text--30t">
@@ -121,12 +123,13 @@
                                 оправдание. Например, затянули со сроками ремонта, зато оплатили неустойку. Честный
                                 клиент вряд ли станет оправдывать недостатки услуги, за которую заплатил.
                             </li>
-                            <li class="article__item-inner article__text">Фотографии из интернета. Копирайтеру негде взять фотографии
+                            <li class="article__item-inner">
+                                <p class="article__text article__counter article__counter--last">Фотографии из интернета. Копирайтеру негде взять фотографии
                                     настоящего ремонта, особенно в больших количествах, поэтому он начинает использовать
                                     фотографии из интернета. Проверить это легко – воспользуйтесь поиском по картинкам
-                                    Яндекса или Гугла.
-                                <p class="article__text">Как проверить отзыв:</p>
-                                <p class="article__text  article__text--35t">Ремонт – дорогое удовольствие, поэтому перед покупкой можно
+                                    Яндекса или Гугла.</p>
+                                <p class="article__text article__text--35b">Как проверить отзыв:</p>
+                                <p class="article__text">Ремонт – дорогое удовольствие, поэтому перед покупкой можно
                                     потратить время на дополнительную проверку отзывов:</p>
                                 <ol class="article__list-review">
                                     <li class="article__item-review article__text">Свяжитесь с автором отзыва. Если есть возможность
@@ -140,8 +143,7 @@
                             </li>
                         </ol>
                     </li>
-                    <li class="article__item">
-                        <h2 class="article__subtitle">Проверьте надёжность компании</h2>
+                    <li class="article__item"><h2 class="article__subtitle">Проверьте надёжность компании</h2>
                         <p class="article__text">Помимо отзывов есть множество доказательств добропорядочности компании.
                             Например, все компании обязаны фиксировать прибыль, количество сотрудников, делопроизводства
                             в суде и т.п. </p>
@@ -149,7 +151,7 @@
                             заказывать дорогостоящий&nbsp;ремонт&nbsp;у&nbsp;компании, в которой зарегистрировано два сотрудника будет
                             меньше, чем у такой же компании с 50+ сотрудниками.</p>
                         <p class="article__text">Как проверить надёжность:</p>
-                        <ol class="article__list-inner">
+                        <ol class="article__list-inner article__list-inner--review">
                             <li class="article__item-inner article__text">Найдите на сайте ИНН/ОГРН. Если у компании на сайте нет этих
                                 данных – вполне возможно, что компании есть, что скрывать. </li>
                             <li class="article__item-inner article__text">Введите эти данные на сайте <a>https://www.rusprofile.ru/</a> и проанализируйте имеющуюся
@@ -165,8 +167,9 @@
                                         начинать сотрудничать с этой компанией. </li>
                                 </ul>
                             </li>
-                            <li class="article__item-inner article__text">Сравните компании между собой.
-                                <p class="article__text article__text--35tb">Прежде чем делать вывод о какой-либо компании – сравните её с
+                            <li class="article__item-inner article__text">
+                                <p class="article__text article__text--35b  article__counter">Сравните компании между собой.</p>
+                                <p class="article__text">Прежде чем делать вывод о какой-либо компании – сравните её с
                                     остальными. Вполне возможно, что факты, которые rusprofile считает отрицательными –
                                     норма для строительной отрасли</p>
                                 <p class="article__text">Для вашего удобства, самые важные данные о&nbsp;компаниях находятся
@@ -175,7 +178,7 @@
                             </li>
                         </ol>
                     </li>
-                    <li class="article__item">
+                    <li class="article__item"> 
                         <h2 class="article__subtitle">Не доверяйте площадкам, которые говорят, что сами проверяют отзывы
                         </h2>
                         <p class="article__text">Для проверки достоверности отзыва крупные сервисы используют множество
@@ -216,32 +219,32 @@
                 <div class="footer__nav">
                     <h3 class="footer__subtitle">Рейтинг</h3>
                     <ul class="footer__list">
-                        <li class="footer__item"><a class="footer__link" href="#" target="_blank">Топ по надежности</a>
+                        <li class="footer__item"><a class="footer__link" href="#">Топ по надежности</a>
                         </li>
-                        <li class="footer__item"><a class="footer__link" href="#" target="_blank">Топ компаний</a></li>
-                        <li class="footer__item"><a class="footer__link" href="#" target="_blank">Создать свой
+                        <li class="footer__item"><a class="footer__link" href="rating.html">Топ компаний</a></li>
+                        <li class="footer__item"><a class="footer__link" href="#">Создать свой
                                 рейтинг</a></li>
                     </ul>
                 </div>
                 <div class="footer__nav">
                     <h3 class="footer__subtitle">Сравнить</h3>
                     <ul class="footer__list">
-                        <li class="footer__item"><a class="footer__link" href="#" target="_blank">Сравнить компании</a>
+                        <li class="footer__item"><a class="footer__link" href="#">Сравнить компании</a>
                         </li>
-                        <li class="footer__item"><a class="footer__link" href="#" target="_blank">Сравнить все</a></li>
-                        <li class="footer__item"><a class="footer__link" href="#" target="_blank">Выбрать для
+                        <li class="footer__item"><a class="footer__link" href="#">Сравнить все</a></li>
+                        <li class="footer__item"><a class="footer__link" href="#">Выбрать для
                                 сравнения</a></li>
                     </ul>
                 </div>
                 <div class="footer__nav">
                     <h3 class="footer__subtitle">Статьи</h3>
                     <ul class="footer__list">
-                        <li class="footer__item"><a class="footer__link" href="#" target="_blank">Как выбрать</a></li>
-                        <li class="footer__item"><a class="footer__link" href="#" target="_blank">Компании</a></li>
-                        <li class="footer__item"><a class="footer__link" href="#" target="_blank">О нас</a></li>
+                        <li class="footer__item"><a class="footer__link" href="#top">Как выбрать</a></li>
+                        <li class="footer__item"><a class="footer__link" href="#">Компании</a></li>
+                        <li class="footer__item"><a class="footer__link" href="#">О нас</a></li>
                     </ul>
                 </div>
-                <a class="footer__logo" href="#top">
+                <a class="footer__logo" href="index.html">
                     <img class="footer__logo-img" src="img/logo-white.svg" width="176" height="31"
                         alt="Логотип сайта - Рейтинг" title="Логотип сайта - Рейтинг">
                 </a>
