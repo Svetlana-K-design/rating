@@ -1,7 +1,7 @@
 .onboarding__wrapper {
     max-width: 956px;
     margin: 0 auto;
-    padding: 10px 16px 58px;
+    padding: 12px 16px 21px;
     text-align: left;
 
     @media(min-width: @mobile-large) {
@@ -50,7 +50,7 @@
   background-color: @white-basic;
   border: 1px solid #8f8f8f  ;
   border-radius: 35px;
-  padding: 12px 38px;
+  padding: 12px 38px 12px 60px;
   box-sizing: border-box;
   width: 100%;
   margin-bottom: 24px;
@@ -63,7 +63,7 @@
   @media(min-width: @tablet-width) {
     margin-bottom: 51px;
     width: 80%;
-    padding: 16px 38px;
+    padding: 16px 38px 16px 60px;
   }
 
   @media(min-width: @tablet-large) {
@@ -87,13 +87,15 @@
     -webkit-outline: none;
 }
 
-.onboarding__input--small {
+.onboarding__input--small,
+.onboarding__lable--small {
     @media(min-width: @mobile-large) {
         display: none;
     }
 }
 
-.onboarding__input--large {
+.onboarding__input--large,
+.onboarding__lable--large {
     display: none;
 
     @media(min-width: @mobile-large) {
@@ -136,6 +138,7 @@
     }
 }
 //Checked
+
 .onboarding__btn-block.checked {
     display: block;
 
@@ -162,7 +165,6 @@
 }
 
 .onboarding__decor.checked {
-    content: "Сумма";
     position: absolute;
     display: block;
     width: 86px;
@@ -172,6 +174,7 @@
     background-color: @decor-green;
     border-radius: 20px;
     box-sizing: border-box;
+    transition: all 0.7s ease-out;
 
     padding: 8px 16px;
     font-size: 16px;
@@ -186,8 +189,9 @@
 }
 
 .onboarding__input.checked {
-    margin-left: 50px;
+    margin-left: 28px;
     width: calc(100% - 30px);
+    transition: all 0.7s ease-out;
 
     &::placeholder {
         font-size: 0;
@@ -204,4 +208,9 @@
       @media(min-width: @desktop-width) {
         width: calc(60% - 30px);
       }
+}
+
+
+.onboarding__input.error {
+    border-color: red;
 }

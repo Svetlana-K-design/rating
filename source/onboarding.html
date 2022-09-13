@@ -55,18 +55,39 @@
         <section class="onboarding">
             <div class="onboarding__wrapper">
                 <h1 class="visually-hidden">Составьте свой рейтинг компаний</h1>
-                <form class="onboarding__form">
+                <form class="onboarding__form" id="formSum" method="post">
                     <fieldset class="onboarding__item">
                         <legend class="onboarding__title">Какую сумму вы планируете потратить на ремонт?</legend>
                         <p class="onboarding__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                         <div class="onboarding__input-block">
-                        <input type="text" placeholder="Сумма" class="onboarding__input onboarding__input--small checked" name="sum" id="sum" required>
-                        <input type="text" placeholder="Какую сумму вы можете потратить на ремонт?" class="onboarding__input onboarding__input--large checked" name="sum" id="sum" required>
-                        <span class="onboarding__decor checked">Сумма</span>
+                        <input type="text" placeholder="Сумма" class="onboarding__input onboarding__input--small" min="5" name="sum" id="sumSmall" required>
+                        <input type="text" placeholder="Какую сумму вы можете потратить на ремонт?" class="onboarding__input onboarding__input--large" min="5" name="sum" id="sumLarge" required>
+                        <span class="onboarding__decor">Сумма</span>
                     </div>
-                        <div class="onboarding__btn-block checked ">
-                            <input type="submin" value="Назад" class="onboarding__btn-prev">
-                            <input type="submin" value="Дальше" class="onboarding__btn-next">
+                        <div class="onboarding__btn-block">
+                            <button type="submit" class="onboarding__btn-prev">Назад</button>
+                            <button type="submit" class="onboarding__btn-next">Дальше</button>
+                        </div>
+                    </fieldset>
+                    <fieldset class="onboarding__item">
+                        <legend class="onboarding__title">Компании с каким количеством отзывом показать?</legend>
+                        <p class="onboarding__input-block">
+                            <input type="radio" class="onboarding__input onboarding__input--small onboarding__input--company" id="showCompanySmall" name="company" value="100 отзывов достаточно">
+                            <lable class="onboarding__lable onboarding__lable--radio onboarding__lable--small" for="showCompanySmall">100 отзывов достаточно</lable>
+                            <input type="radio" class="onboarding__input onboarding__input--large onboarding__input--company" id="showCompanyLarge" name="company" value="100 отзывов это уже прилично">
+                            <lable class="onboarding__lable onboarding__lable--radio onboarding__lable--large" for="showCompanySmall">100 отзывов это уже прилично</lable>
+                        </p>
+                        <p class="onboarding__input-block">
+                            <input type="radio" class="onboarding__input onboarding__input--company" id="showCompanyTwo" value="Не меньше 150" name="company">
+                            <lable class="onboarding__lable onboarding__lable--radio" for="showCompanySmall">Не меньше 150</lable>
+                        </p>
+                        <p class="onboarding__input-block">
+                            <input type="radio" class="onboarding__input onboarding__input--company" id="showCompanyTwo" value="Конечно больше 200" name="company">
+                            <lable class="onboarding__lable onboarding__lable--radio" for="showCompanySmall">Конечно больше 200</lable>
+                        </p>
+                        <div class="onboarding__btn-block">
+                            <button type="submit" class="onboarding__btn-prev">Назад</button>
+                            <button type="submit" class="onboarding__btn-next">Дальше</button>
                         </div>
                     </fieldset>
                 </form>

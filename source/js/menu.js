@@ -4,44 +4,6 @@ $(document).ready(function() {
     });
 });
 
-//Tabs-form
-function openFormRemont() {
-    var i, tabcontent;
-    var x = document.getElementById("type-remont-room").value;
-
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
-    }
-    document.getElementById("type-remont-room-" + x).style.display = "block";
-  }
-
-
-//Pop-up price
-$(document).ready(function () {
-  $('.price__button').click(function (event) {
-    $('.price__popup, .page-body').addClass('active');
-  });
-
-  // Нажатие клавиши Esc
-  $(document).keydown(function (e) {
-    if (e.keyCode === 27) {
-      e.stopPropagation();
-      $('.price__popup, .page-body').removeClass('active');
-    }
-  });
-
-  // Клик по странице
-  $(document).click(function (e) {
-    //if ($(e.target).closest('.price__popup').length) {
-    if ($('.price__popup').hasClass('active')&&!($(e.target).hasClass('price__button'))) {  
-      $('.price__popup, .page-body').removeClass('active');
-    }
-  });
-});
-
-
-
 //Scroll
 document.querySelectorAll('a[href^="#"').forEach(link => {
 
@@ -63,3 +25,81 @@ document.querySelectorAll('a[href^="#"').forEach(link => {
       });
   });
 });
+
+
+//Add .checked to form
+$('.onboarding__input').focus(function() {
+    $('.onboarding__input, .onboarding__decor, .onboarding__btn-block').addClass('checked');
+});
+
+function validateForm(params) {
+  // Объявляем переменные (форма и кнопка отправки)
+  let form = $(params),
+  btn = form.find('.onboarding__btn-next');     
+
+  // Добавляем каждому проверяемому полю, указание что поле пустое
+  form.find('.onboarding__input').addClass('empty-field');
+
+  // Функция проверки полей формы
+  function checkInput(){
+    form.find('.onboarding__input').each(function() {
+      if($(this).val() != '' && $(this).val().indexOf('_') == -1) {
+            // Если поле не пустое удаляем класс-указание
+            $(this).removeClass('empty-field');
+          } else {
+            // Если поле пустое добавляем класс-указание
+            $(this).addClass('empty-field');
+          }
+        });
+  }
+
+  // Функция подсветки незаполненных полей
+  function lightEmpty(){
+    form.find('.empty-field').addClass('error');
+  }
+
+  form.find('.empty-field').on('change', function(){
+    if ($(this).val() != '' && $(this).val().indexOf('_') == -1) {
+      $(this).removeClass('empty-field').removeClass('error');
+    }
+  });
+
+
+  // Проверка в режиме реального времени
+  setInterval(function(){
+      // Запускаем функцию проверки полей на заполненность
+      checkInput();
+      // Считаем к-во незаполненных полей
+      let sizeEmpty = form.find('.empty-field').length;
+      // Вешаем условие-тригер на кнопку отправки формы
+      if(sizeEmpty > 0) {
+        if(btn.hasClass('disabled')){
+          return false
+        } else {
+          btn.addClass('disabled')
+        }
+      } else {
+        btn.removeClass('disabled')
+      }
+
+    }, 1500);
+
+  // Событие клика по кнопке отправить
+  btn.click(function(){
+    if($(this).hasClass('disabled')) {
+        // подсвечиваем незаполненные поля и форму не отправляем, если есть незаполненные поля
+        lightEmpty();
+        return false
+      } else {
+        // Все хорошо, все заполнено, отправляем форму           
+        form.submit();
+      }
+    });
+};
+
+validateForm('#formSum');
+
+
+
+
+
