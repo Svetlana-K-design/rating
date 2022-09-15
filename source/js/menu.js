@@ -29,7 +29,19 @@ document.querySelectorAll('a[href^="#"').forEach(link => {
 
 //Add .checked to form
 $('.onboarding__input').focus(function() {
-    $('.onboarding__input, .onboarding__decor, .onboarding__btn-block').addClass('checked');
+    $('.onboarding__input, .onboarding__decor, .onboarding__btn--block').addClass('active');
+});
+
+$('.onboarding__input-radio').change(function() {
+  if ($(this).attr("checked")) {
+    $('.onboarding__btn--radio').addClass('active');
+  }
+});
+
+$('.onboarding__input-checkbox').change(function() {
+  if ($(this).attr("checked")) {
+    $('.onboarding__btn--checkbox').addClass('active');
+  }
 });
 
 function validateForm(params) {

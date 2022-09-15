@@ -23,7 +23,7 @@
                 <nav class="header__navigation navigation">
                     <ul class="navigation__list navigation__list--closed">
                         <li class="navigation__item navigation__dropdown">
-                            <a class="navigation__link">Рейтинги</a>
+                            <span class="navigation__link">Рейтинги</span>
                             <span class="navigation__btn"></span>
                             <ul class="navigation__sub-list">
                                 <li><a href="#">Топ по надежности</a></li>
@@ -32,7 +32,7 @@
                             </ul>
                         </li>
                         <li class="navigation__item navigation__dropdown">
-                            <a class="navigation__link">Сравнить</a>
+                            <span class="navigation__link">Сравнить</span>
                             <span class="navigation__btn"></span>
                             <ul class="navigation__sub-list">
                                 <li><a href="#">Сравнить компании</a></li>
@@ -54,18 +54,24 @@
     <main>
         <section class="rating">
             <div class="rating__wrapper rating__wrapper--top">
-              <h1 class="visually-hidden">Рейтинг компаний</h1>
-              <h2 class="rating__title rating__title--top">Рейтинг компаний</h2>
-              <ul class="rating__subtitle rating__subtitle rating__subtitle--top">
-                <li class="rating__name">Компания</li>
-                <li class="rating__name rating__name--check">Оценка</li>
-                <li class="rating__name rating__name--check">Цены</li>
-                <li class="rating__name rating__name--check">Отзывы</li>
-                <li class="rating__name">Сравнить</li>
-              </ul>
-              <div class="rating__table rating__table--top">
-                <div class="rating__cell rating__cell--top">
-                  <div class="rating__desk">
+              <h1 class="visually-hidden">Пользовательский pейтинг компаний</h1>
+              <h2 class="rating__title rating__title--top">Рейтинг компаний для вас</h2>
+              <div class="rating__all-company">
+                <p class="rating__explan-text">
+                  Рейтинг для вас по 4 критериям. Для более точной оценки, вы можете посмотреть все критерии для компаний выбраных для вас.
+                </p>
+                <button type="button" class="rating__button rating__button--custom">Смотреть все критерии</a>
+              </div>
+              <div class="rating__custom-short">
+                <ul class="rating__subtitle rating__subtitle rating__subtitle--top">
+                  <li class="rating__name">Компания</li>
+                  <li class="rating__name rating__name--check">Оценка</li>
+                  <li class="rating__name rating__name--check">Цены</li>
+                  <li class="rating__name rating__name--check">Отзывы</li>
+                  <li class="rating__name">Фото</li>
+                </ul>
+                <div class="rating__table rating__table--top">
+                  <div class="rating__cell rating__cell--top  rating__cell--custom">
                     <div class="rating__item">
                       <h3 class="rating__subtitle rating__subtitle--intro">Компания</h3>
                       <div class="rating__text">
@@ -86,38 +92,12 @@
                       <h3 class="rating__subtitle rating__subtitle--intro">Отзывы</h3>
                       <p class="rating__value rating__value--buble">150 отзывов</p>
                     </div>
-                  </div>
-                  <input id="first-item" class="rating__check" type="checkbox">
-                  <label class="rating__check-custom" for="first-item"></label>
-                </div>
-                <div class="rating__cell rating__cell--top">
-                  <div class="rating__desk">
                     <div class="rating__item">
-                      <h3 class="rating__subtitle rating__subtitle--intro">Компания</h3>
-                      <div class="rating__text">
-                        <h4 class="rating__company-name">Студия Ремонтов</h4>
-                        <p>studia-remontov.ru</p>
-                        <p>+7 (945) 414-24-40</p>
-                      </div>
-                    </div>
-                    <div class="rating__item">
-                      <h3 class="rating__subtitle rating__subtitle--intro">Оценка</h3>
-                      <p class="rating__value rating__value--star">4.9</p>
-                    </div>
-                    <div class="rating__item">
-                      <h3 class="rating__subtitle rating__subtitle--intro">Цены</h3>
-                      <p class="rating__value">$$$$</p>
-                    </div>
-                    <div class="rating__item">
-                      <h3 class="rating__subtitle rating__subtitle--intro">Отзывы</h3>
-                      <p class="rating__value rating__value--buble">150 отзывов</p>
+                      <h3 class="rating__subtitle rating__subtitle--intro">Фото</h3>
+                      <p class="rating__value rating__value">150</p>
                     </div>
                   </div>
-                  <input id="second-item" class="rating__check" type="checkbox">
-                  <label class="rating__check-custom" for="second-item"></label>
-                </div>
-                <div class="rating__cell rating__cell--top">
-                  <div class="rating__desk">
+                  <div class="rating__cell rating__cell--top  rating__cell--custom">
                     <div class="rating__item">
                       <h3 class="rating__subtitle rating__subtitle--intro">Компания</h3>
                       <div class="rating__text">
@@ -138,12 +118,12 @@
                       <h3 class="rating__subtitle rating__subtitle--intro">Отзывы</h3>
                       <p class="rating__value rating__value--buble">150 отзывов</p>
                     </div>
+                    <div class="rating__item">
+                      <h3 class="rating__subtitle rating__subtitle--intro">Фото</h3>
+                      <p class="rating__value rating__value--buble">100</p>
+                    </div>
                   </div>
-                  <input id="third-item" class="rating__check" type="checkbox">
-                  <label class="rating__check-custom" for="third-item"></label>
-                </div>
-                <div class="rating__cell rating__cell--top">
-                  <div class="rating__desk">
+                  <div class="rating__cell rating__cell--top  rating__cell--custom">
                     <div class="rating__item">
                       <h3 class="rating__subtitle rating__subtitle--intro">Компания</h3>
                       <div class="rating__text">
@@ -164,12 +144,12 @@
                       <h3 class="rating__subtitle rating__subtitle--intro">Отзывы</h3>
                       <p class="rating__value rating__value--buble">150 отзывов</p>
                     </div>
+                    <div class="rating__item">
+                      <h3 class="rating__subtitle rating__subtitle--intro">Фото</h3>
+                      <p class="rating__value rating__value--buble">100</p>
+                    </div>
                   </div>
-                  <input id="fourth-item" class="rating__check" type="checkbox">
-                  <label class="rating__check-custom" for="fourth-item"></label>
-                </div>
-                <div class="rating__cell rating__cell--top">
-                  <div class="rating__desk">
+                  <div class="rating__cell rating__cell--top rating__cell--custom">
                     <div class="rating__item">
                       <h3 class="rating__subtitle rating__subtitle--intro">Компания</h3>
                       <div class="rating__text">
@@ -190,11 +170,79 @@
                       <h3 class="rating__subtitle rating__subtitle--intro">Отзывы</h3>
                       <p class="rating__value rating__value--buble">150 отзывов</p>
                     </div>
+                    <div class="rating__item">
+                      <h3 class="rating__subtitle rating__subtitle--intro">Фото</h3>
+                      <p class="rating__value rating__value--buble">100</p>
+                    </div>
                   </div>
-                  <input id="fifth-item" class="rating__check" type="checkbox">
-                  <label class="rating__check-custom" for="fifth-item"></label>
+                  <div class="rating__cell rating__cell--top rating__cell--custom">
+                    <div class="rating__item">
+                      <h3 class="rating__subtitle rating__subtitle--intro">Компания</h3>
+                      <div class="rating__text">
+                        <h4 class="rating__company-name">Студия Ремонтов</h4>
+                        <p>studia-remontov.ru</p>
+                        <p>+7 (945) 414-24-40</p>
+                      </div>
+                    </div>
+                    <div class="rating__item">
+                      <h3 class="rating__subtitle rating__subtitle--intro">Оценка</h3>
+                      <p class="rating__value rating__value--star">4.9</p>
+                    </div>
+                    <div class="rating__item">
+                      <h3 class="rating__subtitle rating__subtitle--intro">Цены</h3>
+                      <p class="rating__value">$$$</p>
+                    </div>
+                    <div class="rating__item">
+                      <h3 class="rating__subtitle rating__subtitle--intro">Отзывы</h3>
+                      <p class="rating__value rating__value--buble">150 отзывов</p>
+                    </div>
+                    <div class="rating__item">
+                      <h3 class="rating__subtitle rating__subtitle--intro">Фото</h3>
+                      <p class="rating__value rating__value--buble">100</p>
+                    </div>
+                  </div>
+                  <div class="rating__cell rating__cell--top  rating__cell--custom">
+                    <div class="rating__item">
+                      <h3 class="rating__subtitle rating__subtitle--intro">Компания</h3>
+                      <div class="rating__text">
+                        <h4 class="rating__company-name">Студия Ремонтов</h4>
+                        <p>studia-remontov.ru</p>
+                        <p>+7 (945) 414-24-40</p>
+                      </div>
+                    </div>
+                    <div class="rating__item">
+                      <h3 class="rating__subtitle rating__subtitle--intro">Оценка</h3>
+                      <p class="rating__value rating__value--star">4.9</p>
+                    </div>
+                    <div class="rating__item">
+                      <h3 class="rating__subtitle rating__subtitle--intro">Цены</h3>
+                      <p class="rating__value">$$$</p>
+                    </div>
+                    <div class="rating__item">
+                      <h3 class="rating__subtitle rating__subtitle--intro">Отзывы</h3>
+                      <p class="rating__value rating__value--buble">150 отзывов</p>
+                    </div>
+                    <div class="rating__item">
+                      <h3 class="rating__subtitle rating__subtitle--intro">Фото</h3>
+                      <p class="rating__value rating__value--buble">100</p>
+                    </div>
+                  </div>
+              
                 </div>
-                <div class="rating__cell rating__cell--top">
+              </div>
+
+              <div class="rating__custom-long">
+                <ul class="rating__subtitle rating__subtitle rating__subtitle--top">
+                  <li class="rating__name">Компания</li>
+                  <li class="rating__name rating__name--check">Оценка</li>
+                  <li class="rating__name rating__name--check">Цены</li>
+                  <li class="rating__name rating__name--check">Отзывы</li>
+                  <li class="rating__name">Фото</li>
+                  <li class="rating__name">Гарантия</li>
+                  <li class="rating__name">Надежность</li>
+                </ul>
+                <div class="rating__table rating__table--top">
+                  <div class="rating__cell rating__cell--top">
                     <div class="rating__desk">
                       <div class="rating__item">
                         <h3 class="rating__subtitle rating__subtitle--intro">Компания</h3>
@@ -216,9 +264,19 @@
                         <h3 class="rating__subtitle rating__subtitle--intro">Отзывы</h3>
                         <p class="rating__value rating__value--buble">150 отзывов</p>
                       </div>
+                      <div class="rating__item">
+                        <h3 class="rating__subtitle rating__subtitle--intro">Фото</h3>
+                        <p class="rating__value">150</p>
+                      </div>
+                      <div class="rating__item">
+                        <h3 class="rating__subtitle rating__subtitle--intro">Гарантия</h3>
+                        <p class="rating__value">Есть</p>
+                      </div>
+                      <div class="rating__item">
+                        <h3 class="rating__subtitle rating__subtitle--intro">Надежность</h3>
+                        <p class="rating__value"></p>
+                      </div>
                     </div>
-                    <input id="first-item" class="rating__check" type="checkbox">
-                    <label class="rating__check-custom" for="first-item"></label>
                   </div>
                   <div class="rating__cell rating__cell--top">
                     <div class="rating__desk">
@@ -324,6 +382,137 @@
                     <input id="fifth-item" class="rating__check" type="checkbox">
                     <label class="rating__check-custom" for="fifth-item"></label>
                   </div>
+                  <div class="rating__cell rating__cell--top">
+                      <div class="rating__desk">
+                        <div class="rating__item">
+                          <h3 class="rating__subtitle rating__subtitle--intro">Компания</h3>
+                          <div class="rating__text">
+                            <h4 class="rating__company-name">Студия Ремонтов</h4>
+                            <p>studia-remontov.ru</p>
+                            <p>+7 (945) 414-24-40</p>
+                          </div>
+                        </div>
+                        <div class="rating__item">
+                          <h3 class="rating__subtitle rating__subtitle--intro">Оценка</h3>
+                          <p class="rating__value rating__value--star">4.9</p>
+                        </div>
+                        <div class="rating__item">
+                          <h3 class="rating__subtitle rating__subtitle--intro">Цены</h3>
+                          <p class="rating__value">$$$</p>
+                        </div>
+                        <div class="rating__item">
+                          <h3 class="rating__subtitle rating__subtitle--intro">Отзывы</h3>
+                          <p class="rating__value rating__value--buble">150 отзывов</p>
+                        </div>
+                      </div>
+                      <input id="first-item" class="rating__check" type="checkbox">
+                      <label class="rating__check-custom" for="first-item"></label>
+                    </div>
+                    <div class="rating__cell rating__cell--top">
+                      <div class="rating__desk">
+                        <div class="rating__item">
+                          <h3 class="rating__subtitle rating__subtitle--intro">Компания</h3>
+                          <div class="rating__text">
+                            <h4 class="rating__company-name">Студия Ремонтов</h4>
+                            <p>studia-remontov.ru</p>
+                            <p>+7 (945) 414-24-40</p>
+                          </div>
+                        </div>
+                        <div class="rating__item">
+                          <h3 class="rating__subtitle rating__subtitle--intro">Оценка</h3>
+                          <p class="rating__value rating__value--star">4.9</p>
+                        </div>
+                        <div class="rating__item">
+                          <h3 class="rating__subtitle rating__subtitle--intro">Цены</h3>
+                          <p class="rating__value">$$$$</p>
+                        </div>
+                        <div class="rating__item">
+                          <h3 class="rating__subtitle rating__subtitle--intro">Отзывы</h3>
+                          <p class="rating__value rating__value--buble">150 отзывов</p>
+                        </div>
+                      </div>
+                      <input id="second-item" class="rating__check" type="checkbox">
+                      <label class="rating__check-custom" for="second-item"></label>
+                    </div>
+                    <div class="rating__cell rating__cell--top">
+                      <div class="rating__desk">
+                        <div class="rating__item">
+                          <h3 class="rating__subtitle rating__subtitle--intro">Компания</h3>
+                          <div class="rating__text">
+                            <h4 class="rating__company-name">Студия Ремонтов</h4>
+                            <p>studia-remontov.ru</p>
+                            <p>+7 (945) 414-24-40</p>
+                          </div>
+                        </div>
+                        <div class="rating__item">
+                          <h3 class="rating__subtitle rating__subtitle--intro">Оценка</h3>
+                          <p class="rating__value rating__value--star">4.9</p>
+                        </div>
+                        <div class="rating__item">
+                          <h3 class="rating__subtitle rating__subtitle--intro">Цены</h3>
+                          <p class="rating__value">$$$</p>
+                        </div>
+                        <div class="rating__item">
+                          <h3 class="rating__subtitle rating__subtitle--intro">Отзывы</h3>
+                          <p class="rating__value rating__value--buble">150 отзывов</p>
+                        </div>
+                      </div>
+                      <input id="third-item" class="rating__check" type="checkbox">
+                      <label class="rating__check-custom" for="third-item"></label>
+                    </div>
+                    <div class="rating__cell rating__cell--top">
+                      <div class="rating__desk">
+                        <div class="rating__item">
+                          <h3 class="rating__subtitle rating__subtitle--intro">Компания</h3>
+                          <div class="rating__text">
+                            <h4 class="rating__company-name">Студия Ремонтов</h4>
+                            <p>studia-remontov.ru</p>
+                            <p>+7 (945) 414-24-40</p>
+                          </div>
+                        </div>
+                        <div class="rating__item">
+                          <h3 class="rating__subtitle rating__subtitle--intro">Оценка</h3>
+                          <p class="rating__value rating__value--star">4.9</p>
+                        </div>
+                        <div class="rating__item">
+                          <h3 class="rating__subtitle rating__subtitle--intro">Цены</h3>
+                          <p class="rating__value">$$$</p>
+                        </div>
+                        <div class="rating__item">
+                          <h3 class="rating__subtitle rating__subtitle--intro">Отзывы</h3>
+                          <p class="rating__value rating__value--buble">150 отзывов</p>
+                        </div>
+                      </div>
+                      <input id="fourth-item" class="rating__check" type="checkbox">
+                      <label class="rating__check-custom" for="fourth-item"></label>
+                    </div>
+                    <div class="rating__cell rating__cell--top">
+                      <div class="rating__desk">
+                        <div class="rating__item">
+                          <h3 class="rating__subtitle rating__subtitle--intro">Компания</h3>
+                          <div class="rating__text">
+                            <h4 class="rating__company-name">Студия Ремонтов</h4>
+                            <p>studia-remontov.ru</p>
+                            <p>+7 (945) 414-24-40</p>
+                          </div>
+                        </div>
+                        <div class="rating__item">
+                          <h3 class="rating__subtitle rating__subtitle--intro">Оценка</h3>
+                          <p class="rating__value rating__value--star">4.9</p>
+                        </div>
+                        <div class="rating__item">
+                          <h3 class="rating__subtitle rating__subtitle--intro">Цены</h3>
+                          <p class="rating__value">$$$</p>
+                        </div>
+                        <div class="rating__item">
+                          <h3 class="rating__subtitle rating__subtitle--intro">Отзывы</h3>
+                          <p class="rating__value rating__value--buble">150 отзывов</p>
+                        </div>
+                      </div>
+                      <input id="fifth-item" class="rating__check" type="checkbox">
+                      <label class="rating__check-custom" for="fifth-item"></label>
+                    </div>
+                </div>
               </div>
             </div>
           </section>
