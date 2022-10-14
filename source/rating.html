@@ -2,9 +2,9 @@
 <html class="page" lang="ru">
 
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Собираетесь делать ремонт? Мы хотим помочь вам сделать выбор компании!</title>
     <meta name="description" content="Собираетесь делать ремонт? Мы хотим помочь вам сделать выбор компании!">
     <meta name="keywords" content="рейтинг, аналитика">
@@ -27,7 +27,7 @@
                             <span class="navigation__btn"></span>
                             <ul class="navigation__sub-list">
                                 <li><a href="#">Топ по надежности</a></li>
-                                <li><a href="#">Топ компаний</a></li>
+                                <li>Топ компаний</li>
                                 <li><a href="onboarding.html">Создать свой рейтинг</a></li>
                             </ul>
                         </li>
@@ -35,7 +35,7 @@
                             <a class="navigation__link">Сравнить</a>
                             <span class="navigation__btn"></span>
                             <ul class="navigation__sub-list">
-                                <li><a href="#">Сравнить компании</a></li>
+                                <li><a href="compare.html">Сравнить компании</a></li>
                                 <li><a href="#">Сравнить все</a></li>
                                 <li><a href="#">Выбрать для сравнения</a></li>  
                             </ul>
@@ -44,7 +44,7 @@
                             <a class="navigation__link" href="article.html">Как выбрать</a>
                         </li>
                         <li class="navigation__item">
-                            <a class="navigation__link" href="#">О нас</a>
+                            <a class="navigation__link" href="company.html">О нас</a>
                         </li>
                     </ul>
                 </nav>
@@ -52,9 +52,9 @@
         </div>
     </header>
     <main>
-        <section class="rating">
+        <section id="top" class="rating">
             <div class="rating__wrapper rating__wrapper--top">
-              <h1 class="visually-hidden">Рейтинг компаний</h1>
+              <h1 class="visually-hidden">Подробный рейтинг компаний</h1>
               <h2 class="rating__title rating__title--top">Рейтинг компаний</h2>
               <ul class="rating__subtitle rating__subtitle rating__subtitle--top">
                 <li class="rating__name">Компания</li>
@@ -68,11 +68,15 @@
                   <div class="rating__desk">
                     <div class="rating__item">
                       <h3 class="rating__subtitle rating__subtitle--intro">Компания</h3>
-                      <div class="rating__text">
-                        <h4 class="rating__company-name">Студия Ремонтов</h4>
-                        <p>studia-remontov.ru</p>
-                        <p>+7 (945) 414-24-40</p>
-                      </div>
+                      <a class="rating__item-link" href="https://studia-remontov.ru" target="_blank">
+                        <div class="rating__text">
+                          <img class="rating__img" src="img/logo-studia-small.svg"
+                        alt="Логотип компании" title="Логотип компании">
+                          <h4 class="rating__company-name">Студия Ремонтов</h4>
+                          <p class="rating__underline">studia-remontov.ru</p>
+                          <p>+7 (945) 414-24-40</p>
+                        </div>
+                      </a>
                     </div>
                     <div class="rating__item">
                       <h3 class="rating__subtitle rating__subtitle--intro">Оценка</h3>
@@ -84,7 +88,7 @@
                     </div>
                     <div class="rating__item">
                       <h3 class="rating__subtitle rating__subtitle--intro">Отзывы</h3>
-                      <p class="rating__value rating__value--buble">150 отзывов</p>
+                      <p class="rating__value rating__value--buble"><a class="rating__link-reviews" href="#">1500 отзывов</a></p>
                     </div>
                   </div>
                   <input id="first-item" class="rating__check" type="checkbox">
@@ -94,11 +98,15 @@
                   <div class="rating__desk">
                     <div class="rating__item">
                       <h3 class="rating__subtitle rating__subtitle--intro">Компания</h3>
-                      <div class="rating__text">
-                        <h4 class="rating__company-name">Студия Ремонтов</h4>
-                        <p>studia-remontov.ru</p>
-                        <p>+7 (945) 414-24-40</p>
-                      </div>
+                      <a class="rating__item-link" href="https://studia-remontov.ru" target="_blank">
+                        <div class="rating__text">
+                          <img class="rating__img" src="img/logo-studia-small.svg"
+                        alt="Логотип компании" title="Логотип компании">
+                          <h4 class="rating__company-name">Студия Ремонтов</h4>
+                          <p class="rating__underline">studia-remontov.ru</p>
+                          <p>+7 (945) 414-24-40</p>
+                        </div>
+                      </a>
                     </div>
                     <div class="rating__item">
                       <h3 class="rating__subtitle rating__subtitle--intro">Оценка</h3>
@@ -110,7 +118,7 @@
                     </div>
                     <div class="rating__item">
                       <h3 class="rating__subtitle rating__subtitle--intro">Отзывы</h3>
-                      <p class="rating__value rating__value--buble">150 отзывов</p>
+                      <p class="rating__value rating__value--buble"><a class="rating__link-reviews" href="#">150 отзывов</a></p>
                     </div>
                   </div>
                   <input id="second-item" class="rating__check" type="checkbox">
@@ -120,11 +128,15 @@
                   <div class="rating__desk">
                     <div class="rating__item">
                       <h3 class="rating__subtitle rating__subtitle--intro">Компания</h3>
-                      <div class="rating__text">
-                        <h4 class="rating__company-name">Студия Ремонтов</h4>
-                        <p>studia-remontov.ru</p>
-                        <p>+7 (945) 414-24-40</p>
-                      </div>
+                      <a class="rating__item-link" href="https://studia-remontov.ru" target="_blank">
+                        <div class="rating__text">
+                          <img class="rating__img" src="img/logo-studia-small.svg"
+                        alt="Логотип компании" title="Логотип компании">
+                          <h4 class="rating__company-name">Студия Ремонтов</h4>
+                          <p class="rating__underline">studia-remontov.ru</p>
+                          <p>+7 (945) 414-24-40</p>
+                        </div>
+                      </a>
                     </div>
                     <div class="rating__item">
                       <h3 class="rating__subtitle rating__subtitle--intro">Оценка</h3>
@@ -136,7 +148,7 @@
                     </div>
                     <div class="rating__item">
                       <h3 class="rating__subtitle rating__subtitle--intro">Отзывы</h3>
-                      <p class="rating__value rating__value--buble">150 отзывов</p>
+                      <p class="rating__value rating__value--buble"><a class="rating__link-reviews" href="#">150 отзывов</a></p>
                     </div>
                   </div>
                   <input id="third-item" class="rating__check" type="checkbox">
@@ -146,11 +158,15 @@
                   <div class="rating__desk">
                     <div class="rating__item">
                       <h3 class="rating__subtitle rating__subtitle--intro">Компания</h3>
-                      <div class="rating__text">
-                        <h4 class="rating__company-name">Студия Ремонтов</h4>
-                        <p>studia-remontov.ru</p>
-                        <p>+7 (945) 414-24-40</p>
-                      </div>
+                      <a class="rating__item-link" href="https://studia-remontov.ru" target="_blank">
+                        <div class="rating__text">
+                          <img class="rating__img" src="img/logo-studia-small.svg"
+                        alt="Логотип компании" title="Логотип компании">
+                          <h4 class="rating__company-name">Студия Ремонтов</h4>
+                          <p class="rating__underline">studia-remontov.ru</p>
+                          <p>+7 (945) 414-24-40</p>
+                        </div>
+                      </a>
                     </div>
                     <div class="rating__item">
                       <h3 class="rating__subtitle rating__subtitle--intro">Оценка</h3>
@@ -162,7 +178,7 @@
                     </div>
                     <div class="rating__item">
                       <h3 class="rating__subtitle rating__subtitle--intro">Отзывы</h3>
-                      <p class="rating__value rating__value--buble">150 отзывов</p>
+                      <p class="rating__value rating__value--buble"><a class="rating__link-reviews" href="#">150 отзывов</a></p>
                     </div>
                   </div>
                   <input id="fourth-item" class="rating__check" type="checkbox">
@@ -172,11 +188,15 @@
                   <div class="rating__desk">
                     <div class="rating__item">
                       <h3 class="rating__subtitle rating__subtitle--intro">Компания</h3>
-                      <div class="rating__text">
-                        <h4 class="rating__company-name">Студия Ремонтов</h4>
-                        <p>studia-remontov.ru</p>
-                        <p>+7 (945) 414-24-40</p>
-                      </div>
+                      <a class="rating__item-link" href="https://studia-remontov.ru" target="_blank">
+                        <div class="rating__text">
+                          <img class="rating__img" src="img/logo-studia-small.svg"
+                        alt="Логотип компании" title="Логотип компании">
+                          <h4 class="rating__company-name">Студия Ремонтов</h4>
+                          <p class="rating__underline">studia-remontov.ru</p>
+                          <p>+7 (945) 414-24-40</p>
+                        </div>
+                      </a>
                     </div>
                     <div class="rating__item">
                       <h3 class="rating__subtitle rating__subtitle--intro">Оценка</h3>
@@ -188,152 +208,172 @@
                     </div>
                     <div class="rating__item">
                       <h3 class="rating__subtitle rating__subtitle--intro">Отзывы</h3>
-                      <p class="rating__value rating__value--buble">150 отзывов</p>
+                      <p class="rating__value rating__value--buble"><a class="rating__link-reviews" href="#">150 отзывов</a></p>
                     </div>
                   </div>
                   <input id="fifth-item" class="rating__check" type="checkbox">
                   <label class="rating__check-custom" for="fifth-item"></label>
                 </div>
                 <div class="rating__cell rating__cell--top">
-                    <div class="rating__desk">
-                      <div class="rating__item">
-                        <h3 class="rating__subtitle rating__subtitle--intro">Компания</h3>
+                  <div class="rating__desk">
+                    <div class="rating__item">
+                      <h3 class="rating__subtitle rating__subtitle--intro">Компания</h3>
+                      <a class="rating__item-link" href="https://studia-remontov.ru" target="_blank">
                         <div class="rating__text">
+                          <img class="rating__img" src="img/logo-studia-small.svg"
+                        alt="Логотип компании" title="Логотип компании">
                           <h4 class="rating__company-name">Студия Ремонтов</h4>
-                          <p>studia-remontov.ru</p>
+                          <p class="rating__underline">studia-remontov.ru</p>
                           <p>+7 (945) 414-24-40</p>
                         </div>
-                      </div>
-                      <div class="rating__item">
-                        <h3 class="rating__subtitle rating__subtitle--intro">Оценка</h3>
-                        <p class="rating__value rating__value--star">4.9</p>
-                      </div>
-                      <div class="rating__item">
-                        <h3 class="rating__subtitle rating__subtitle--intro">Цены</h3>
-                        <p class="rating__value">$$$</p>
-                      </div>
-                      <div class="rating__item">
-                        <h3 class="rating__subtitle rating__subtitle--intro">Отзывы</h3>
-                        <p class="rating__value rating__value--buble">150 отзывов</p>
-                      </div>
+                      </a>
                     </div>
-                    <input id="first-item" class="rating__check" type="checkbox">
-                    <label class="rating__check-custom" for="first-item"></label>
+                    <div class="rating__item">
+                      <h3 class="rating__subtitle rating__subtitle--intro">Оценка</h3>
+                      <p class="rating__value rating__value--star">4.9</p>
+                    </div>
+                    <div class="rating__item">
+                      <h3 class="rating__subtitle rating__subtitle--intro">Цены</h3>
+                      <p class="rating__value">$$$</p>
+                    </div>
+                    <div class="rating__item">
+                      <h3 class="rating__subtitle rating__subtitle--intro">Отзывы</h3>
+                      <p class="rating__value rating__value--buble"><a class="rating__link-reviews" href="#">150 отзывов</a></p>
+                    </div>
                   </div>
-                  <div class="rating__cell rating__cell--top">
-                    <div class="rating__desk">
-                      <div class="rating__item">
-                        <h3 class="rating__subtitle rating__subtitle--intro">Компания</h3>
+                  <input id="sixth-item" class="rating__check" type="checkbox">
+                  <label class="rating__check-custom" for="sixth-item"></label>
+                </div>
+                <div class="rating__cell rating__cell--top">
+                  <div class="rating__desk">
+                    <div class="rating__item">
+                      <h3 class="rating__subtitle rating__subtitle--intro">Компания</h3>
+                      <a class="rating__item-link" href="https://studia-remontov.ru" target="_blank">
                         <div class="rating__text">
+                          <img class="rating__img" src="img/logo-studia-small.svg"
+                        alt="Логотип компании" title="Логотип компании">
                           <h4 class="rating__company-name">Студия Ремонтов</h4>
-                          <p>studia-remontov.ru</p>
+                          <p class="rating__underline">studia-remontov.ru</p>
                           <p>+7 (945) 414-24-40</p>
                         </div>
-                      </div>
-                      <div class="rating__item">
-                        <h3 class="rating__subtitle rating__subtitle--intro">Оценка</h3>
-                        <p class="rating__value rating__value--star">4.9</p>
-                      </div>
-                      <div class="rating__item">
-                        <h3 class="rating__subtitle rating__subtitle--intro">Цены</h3>
-                        <p class="rating__value">$$$$</p>
-                      </div>
-                      <div class="rating__item">
-                        <h3 class="rating__subtitle rating__subtitle--intro">Отзывы</h3>
-                        <p class="rating__value rating__value--buble">150 отзывов</p>
-                      </div>
+                      </a>
                     </div>
-                    <input id="second-item" class="rating__check" type="checkbox">
-                    <label class="rating__check-custom" for="second-item"></label>
+                    <div class="rating__item">
+                      <h3 class="rating__subtitle rating__subtitle--intro">Оценка</h3>
+                      <p class="rating__value rating__value--star">4.9</p>
+                    </div>
+                    <div class="rating__item">
+                      <h3 class="rating__subtitle rating__subtitle--intro">Цены</h3>
+                      <p class="rating__value">$$$$</p>
+                    </div>
+                    <div class="rating__item">
+                      <h3 class="rating__subtitle rating__subtitle--intro">Отзывы</h3>
+                      <p class="rating__value rating__value--buble"><a class="rating__link-reviews" href="#">150 отзывов</a></p>
+                    </div>
                   </div>
-                  <div class="rating__cell rating__cell--top">
-                    <div class="rating__desk">
-                      <div class="rating__item">
-                        <h3 class="rating__subtitle rating__subtitle--intro">Компания</h3>
+                  <input id="seventh-item" class="rating__check" type="checkbox">
+                  <label class="rating__check-custom" for="seventh-item"></label>
+                </div>
+                <div class="rating__cell rating__cell--top">
+                  <div class="rating__desk">
+                    <div class="rating__item">
+                      <h3 class="rating__subtitle rating__subtitle--intro">Компания</h3>
+                      <a class="rating__item-link" href="https://studia-remontov.ru" target="_blank">
                         <div class="rating__text">
+                          <img class="rating__img" src="img/logo-studia-small.svg"
+                        alt="Логотип компании" title="Логотип компании">
                           <h4 class="rating__company-name">Студия Ремонтов</h4>
-                          <p>studia-remontov.ru</p>
+                          <p class="rating__underline">studia-remontov.ru</p>
                           <p>+7 (945) 414-24-40</p>
                         </div>
-                      </div>
-                      <div class="rating__item">
-                        <h3 class="rating__subtitle rating__subtitle--intro">Оценка</h3>
-                        <p class="rating__value rating__value--star">4.9</p>
-                      </div>
-                      <div class="rating__item">
-                        <h3 class="rating__subtitle rating__subtitle--intro">Цены</h3>
-                        <p class="rating__value">$$$</p>
-                      </div>
-                      <div class="rating__item">
-                        <h3 class="rating__subtitle rating__subtitle--intro">Отзывы</h3>
-                        <p class="rating__value rating__value--buble">150 отзывов</p>
-                      </div>
+                      </a>
                     </div>
-                    <input id="third-item" class="rating__check" type="checkbox">
-                    <label class="rating__check-custom" for="third-item"></label>
+                    <div class="rating__item">
+                      <h3 class="rating__subtitle rating__subtitle--intro">Оценка</h3>
+                      <p class="rating__value rating__value--star">4.9</p>
+                    </div>
+                    <div class="rating__item">
+                      <h3 class="rating__subtitle rating__subtitle--intro">Цены</h3>
+                      <p class="rating__value">$$$</p>
+                    </div>
+                    <div class="rating__item">
+                      <h3 class="rating__subtitle rating__subtitle--intro">Отзывы</h3>
+                      <p class="rating__value rating__value--buble"><a class="rating__link-reviews" href="#">150 отзывов</a></p>
+                    </div>
                   </div>
-                  <div class="rating__cell rating__cell--top">
-                    <div class="rating__desk">
-                      <div class="rating__item">
-                        <h3 class="rating__subtitle rating__subtitle--intro">Компания</h3>
+                  <input id="eighth-item" class="rating__check" type="checkbox">
+                  <label class="rating__check-custom" for="eighth-item"></label>
+                </div>
+                <div class="rating__cell rating__cell--top">
+                  <div class="rating__desk">
+                    <div class="rating__item">
+                      <h3 class="rating__subtitle rating__subtitle--intro">Компания</h3>
+                      <a class="rating__item-link" href="https://studia-remontov.ru" target="_blank">
                         <div class="rating__text">
+                          <img class="rating__img" src="img/logo-studia-small.svg"
+                        alt="Логотип компании" title="Логотип компании">
                           <h4 class="rating__company-name">Студия Ремонтов</h4>
-                          <p>studia-remontov.ru</p>
+                          <p class="rating__underline">studia-remontov.ru</p>
                           <p>+7 (945) 414-24-40</p>
                         </div>
-                      </div>
-                      <div class="rating__item">
-                        <h3 class="rating__subtitle rating__subtitle--intro">Оценка</h3>
-                        <p class="rating__value rating__value--star">4.9</p>
-                      </div>
-                      <div class="rating__item">
-                        <h3 class="rating__subtitle rating__subtitle--intro">Цены</h3>
-                        <p class="rating__value">$$$</p>
-                      </div>
-                      <div class="rating__item">
-                        <h3 class="rating__subtitle rating__subtitle--intro">Отзывы</h3>
-                        <p class="rating__value rating__value--buble">150 отзывов</p>
-                      </div>
+                      </a>
                     </div>
-                    <input id="fourth-item" class="rating__check" type="checkbox">
-                    <label class="rating__check-custom" for="fourth-item"></label>
+                    <div class="rating__item">
+                      <h3 class="rating__subtitle rating__subtitle--intro">Оценка</h3>
+                      <p class="rating__value rating__value--star">4.9</p>
+                    </div>
+                    <div class="rating__item">
+                      <h3 class="rating__subtitle rating__subtitle--intro">Цены</h3>
+                      <p class="rating__value">$$$</p>
+                    </div>
+                    <div class="rating__item">
+                      <h3 class="rating__subtitle rating__subtitle--intro">Отзывы</h3>
+                      <p class="rating__value rating__value--buble"><a class="rating__link-reviews" href="#">150 отзывов</a></p>
+                    </div>
                   </div>
-                  <div class="rating__cell rating__cell--top">
-                    <div class="rating__desk">
-                      <div class="rating__item">
-                        <h3 class="rating__subtitle rating__subtitle--intro">Компания</h3>
+                  <input id="ninth-item" class="rating__check" type="checkbox">
+                  <label class="rating__check-custom" for="ninth-item"></label>
+                </div>
+                <div class="rating__cell rating__cell--top">
+                  <div class="rating__desk">
+                    <div class="rating__item">
+                      <h3 class="rating__subtitle rating__subtitle--intro">Компания</h3>
+                      <a class="rating__item-link" href="https://studia-remontov.ru" target="_blank">
                         <div class="rating__text">
+                          <img class="rating__img" src="img/logo-studia-small.svg"
+                        alt="Логотип компании" title="Логотип компании">
                           <h4 class="rating__company-name">Студия Ремонтов</h4>
-                          <p>studia-remontov.ru</p>
+                          <p class="rating__underline">studia-remontov.ru</p>
                           <p>+7 (945) 414-24-40</p>
                         </div>
-                      </div>
-                      <div class="rating__item">
-                        <h3 class="rating__subtitle rating__subtitle--intro">Оценка</h3>
-                        <p class="rating__value rating__value--star">4.9</p>
-                      </div>
-                      <div class="rating__item">
-                        <h3 class="rating__subtitle rating__subtitle--intro">Цены</h3>
-                        <p class="rating__value">$$$</p>
-                      </div>
-                      <div class="rating__item">
-                        <h3 class="rating__subtitle rating__subtitle--intro">Отзывы</h3>
-                        <p class="rating__value rating__value--buble">150 отзывов</p>
-                      </div>
+                      </a>
                     </div>
-                    <input id="fifth-item" class="rating__check" type="checkbox">
-                    <label class="rating__check-custom" for="fifth-item"></label>
+                    <div class="rating__item">
+                      <h3 class="rating__subtitle rating__subtitle--intro">Оценка</h3>
+                      <p class="rating__value rating__value--star">4.9</p>
+                    </div>
+                    <div class="rating__item">
+                      <h3 class="rating__subtitle rating__subtitle--intro">Цены</h3>
+                      <p class="rating__value">$$$</p>
+                    </div>
+                    <div class="rating__item">
+                      <h3 class="rating__subtitle rating__subtitle--intro">Отзывы</h3>
+                      <p class="rating__value rating__value--buble"><a class="rating__link-reviews" href="#">150 отзывов</a></p>
+                    </div>
                   </div>
+                  <input id="tenth-item" class="rating__check" type="checkbox">
+                  <label class="rating__check-custom" for="tenth-item"></label>
+                </div>
               </div>
             </div>
           </section>
           <section class="feedback">
             <div class="feedback__wrapper feedback__wrapper--top">
               <h2 class="feedback__title">Необходима консультация в <span class="feedback__br-tablet">выборе <span class="feedback__br-desktop">компании?</span></span></h2>
-              <form class="feedback__form">
+              <form class="feedback__form" method="post" action="#" id="callBackRating">
                 <label class="feedback__phone" for="phone">Мы вам перезвоним и ответим на все ваши вопросы</label>
                 <input class="feedback__input" type="tel" id="phone" name="phone" pattern="\+7\[0-9]{3}\s?\[0-9]{3}\s?\[0-9]{2}\s?\[0-9]{2}" required placeholder="+7(XХХ) ХХХ ХХ ХХ">
-                <button type="submit" class="feedback__button">Перезвоните мне</button>
+                <button type="submit" class="feedback__button btn-valid">Перезвоните мне</button>
               </form>
             </div>
           </section>
@@ -355,7 +395,7 @@
                 <div class="footer__nav">
                     <h3 class="footer__subtitle">Сравнить</h3>
                     <ul class="footer__list">
-                        <li class="footer__item"><a class="footer__link" href="#">Сравнить компании</a>
+                        <li class="footer__item"><a class="footer__link" href="compare.html">Сравнить компании</a>
                         </li>
                         <li class="footer__item"><a class="footer__link" href="#">Сравнить все</a></li>
                         <li class="footer__item"><a class="footer__link" href="#">Выбрать для
@@ -367,7 +407,7 @@
                     <ul class="footer__list">
                         <li class="footer__item"><a class="footer__link" href="article.html">Как выбрать</a></li>
                         <li class="footer__item"><a class="footer__link" href="#">Компании</a></li>
-                        <li class="footer__item"><a class="footer__link" href="#">О нас</a></li>
+                        <li class="footer__item"><a class="footer__link" href="company.html">О нас</a></li>
                     </ul>
                 </div>
                 <a class="footer__logo" href="index.html">

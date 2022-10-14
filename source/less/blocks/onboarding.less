@@ -104,6 +104,18 @@
   }
 }
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 .onboarding__input:hover {
     box-shadow: 0px 4px 4px 0 rgba(113, 113, 113, 0.25);
 }
@@ -116,6 +128,7 @@
     -webkit-outline: none;
 }
 
+/**
 .onboarding__input--small {
     @media(min-width: @mobile-large) {
         display: none;
@@ -129,6 +142,7 @@
         display: block;
     }
 }
+**/
 
 
 
@@ -146,6 +160,12 @@
     width: 100%;
     margin: 0 auto 24px;
     padding: 17px;
+
+    &:disabled {
+        background-color: @decor-grey;
+        border-color: @decor-grey;
+        color: @white-basic;
+    }
 
     @media(min-width: @mobile-large) {
         max-width: 152px;
@@ -218,10 +238,9 @@
     font-weight: 600;
     color: @white-basic;
 
-    @media(min-width: @mobile-large) {
-        top: calc(50% - 19px);
+    @media(min-width: @tablet-width) {
+        top: calc(50% - 45px);
     }
-
 }
 
 .onboarding__input.active {

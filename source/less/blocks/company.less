@@ -1,3 +1,41 @@
+.company--index {
+    @media(min-width: @tablet-large) {
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+            content: "студия";
+            line-height: 270px;
+            top: 0;
+        }
+
+
+        &::after {
+            content: "ремонтов";
+            line-height: 286px;
+            bottom: 0;
+        }
+
+        &::before,
+        &::after {
+            position: absolute;
+            font-size: 400px;
+            font-weight: 800;
+            color: rgba(234, 236, 236, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            z-index: -1;
+            left: 0;
+            right:0;
+
+            @media(min-width: @desktop-width) {
+                font-size: 560px;
+                line-height: 376px;
+            }
+        }
+    }
+}
+
 .company__wrapper {
     max-width: @desktop-width;
     margin: 0 auto;
@@ -10,7 +48,27 @@
         display: flex;
         padding: 0 24px;
         justify-content: space-between;
+        z-index: 1;
         
+    }
+}
+
+.company__wrapper-index {
+    max-width: @desktop-width;
+    margin: 0 auto;
+    padding: 39px 16px;
+    text-align: center;
+    position: relative;
+
+    @media(min-width: @tablet-large) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 51px 24px;
+    }
+
+    @media(min-width: @desktop-width) {
+        padding: 135px 24px;
     }
 }
 
@@ -21,6 +79,26 @@
     @media(min-width: @tablet-width) {
         max-width: 49%;
         text-align: left;
+    }
+}
+
+.company__flex-index {
+    display: flex;
+    flex-direction: column;
+    margin-top: 130px; 
+
+    @media(min-width: @mobile-large) {
+        margin-top: 198px; 
+    }
+
+    @media(min-width: @tablet-width) {
+        margin-top: 335px; 
+    }
+
+    @media(min-width: @tablet-large) {
+        max-width: 49%;
+        text-align: left;
+        margin-top: 0; 
     }
 }
 
@@ -46,6 +124,15 @@
     }
 }
 
+.company__flex-index .company__title {
+    line-height: 32px;
+    margin-bottom: 19px;
+
+    @media(min-width: @tablet-large) {
+        margin-bottom: 39px;
+    }
+}
+
 .company__text {
     line-height: 32px;
     margin: 0;
@@ -64,6 +151,44 @@
     @media(min-width: @desktop-width) {
         margin-bottom: 35px;
     }
+}
+
+.company__link-web {
+    color: @decor-green;
+
+    &:hover {
+        text-decoration: underline;
+        text-underline-offset: 2px;
+
+    }
+
+    &:active {
+        opacity: 0.7;
+    }
+}
+
+.company__link-phone {
+    color: @color-text;
+}
+
+.company__contacts-block {
+    margin-bottom: 22px;
+
+    @media(min-width: @tablet-width) {
+        margin-bottom: 30px;
+    }
+
+    @media(min-width: @tablet-large) {
+        margin-bottom: 38px;
+    }
+}
+
+.company__contacts-block .company__text {
+    margin: 0;
+}
+
+.company__contacts-block .company__text + .company__text {
+    margin-top: 5px;
 }
 
 .company__button {
@@ -85,6 +210,20 @@
     }
 }
 
+.company__button-index {
+    .button-green();
+    width: 100%;
+    margin: 0 auto;
+
+    @media(min-width: @mobile-large) {
+        max-width: 208px;
+    }
+
+    @media(min-width: @tablet-large) {
+        max-width: 266px;
+        margin: 0;
+    }
+}
 
 .company__logo {
     display: block;
@@ -120,4 +259,74 @@
         width: 563px;
         margin-top: -50px;
     }
+}
+
+.company__link--index {
+    width: 128px;
+    top: 39px;
+    left: calc(50% - 64px);
+
+    @media(min-width: @mobile-large) {
+        width: 208px;
+        left: calc(50% - 104px);
+    }
+
+    @media(min-width: @tablet-width) {
+        width: 323px;
+        position: absolute;
+        left: calc(50% - 156px);
+
+    }
+
+    @media(min-width: @tablet-large) {
+        position: static;
+        margin: 0;
+        width: 48.5%;
+    }
+}
+
+.company__social {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    transition: all 0.7s ease-out;
+
+    &--vk {
+        background-image: url("../img/vk.svg");
+        margin-left: 5px;
+    }
+
+    &--fb {
+        background-image: url("../img/fb.svg");
+        border-radius: 4px;
+    }
+
+    &--ok {
+        background-image: url("../img/ok.svg");
+    }
+
+    &--insta {
+        background-image: url("../img/insta.svg");
+    }
+
+    &--youtube {
+        background-image: url("../img/youtube.svg");
+        width: 20px;
+        height: 12px;
+    }
+
+    &:hover {
+        transform: scale(1.5);
+        transition: all 0.7s ease-out;
+    }
+
+    &:active {
+        opacity: 0.6;
+    }
+}
+
+.company__social + .company__social {
+    margin-left: 5px;
 }

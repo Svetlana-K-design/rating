@@ -2,9 +2,9 @@
 <html class="page" lang="ru">
 
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Собираетесь делать ремонт? Мы хотим помочь вам сделать выбор компании!</title>
   <meta name="description" content="Собираетесь делать ремонт? Мы хотим помочь вам сделать выбор компании!">
   <meta name="keywords" content="рейтинг, аналитика">
@@ -35,7 +35,7 @@
               <span class="navigation__link">Сравнить</span>
               <span class="navigation__btn"></span>
               <ul class="navigation__sub-list">
-                <li><a href="#">Сравнить компании</a></li>
+                <li><a href="compare.html">Сравнить компании</a></li>
                 <li><a href="#">Сравнить все</a></li>
                 <li><a href="#">Выбрать для сравнения</a></li>  
               </ul>
@@ -44,7 +44,7 @@
               <a class="navigation__link" href="article.html">Как выбрать</a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link" href="#">О нас</a>
+              <a class="navigation__link" href="company.html">О нас</a>
             </li>
           </ul>
         </nav>
@@ -52,14 +52,14 @@
     </div>
   </header>
   <main>
-    <section class="choice">
+    <section id="top" class="choice">
       <div class="choice__wrapper">
         <h1 class="choice__title">Собираетесь делать ремонт?</h1>
         <h2 class="choice__subtitle">Мы хотим помочь вам сделать выбор компании</h2>
         <p class="choice__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor <span>incididunt ut labore et
           dolore
           magna aliqua. Ut enim ad minim veniam, quis nostrud.</span></p>
-        <a class="choice__button">Выбрать лучшую компанию</a>
+        <a class="choice__button" href="onboarding.html">Выбрать лучшую компанию</a>
       </div>
     </section>
     <section class="company">
@@ -75,10 +75,10 @@
           mollit
           anim id est laborum.
         </p>
-        <a class="company__button" href="#">Узнать больше</a>
+        <a class="company__button" href="company.html">Узнать больше</a>
       </div>
-      <a class="company__link" href="#" target="_blank">
-        <img class="company__logo" src="img/logo-studia.svg" alt="Логотип компании Студия ремонта" title="Логотип компании Студия ремонта" />
+      <a class="company__link" href="company.html" target="_blank">
+        <img class="company__logo" src="img/logo-studia.svg" alt="Логотип компании Студия ремонта" title="Логотип компании Студия ремонта">
     </a>
       </div>
     </section>
@@ -97,11 +97,15 @@
             <div class="rating__desk">
               <div class="rating__item">
                 <h3 class="rating__subtitle rating__subtitle--intro">Компания</h3>
-                <div class="rating__text">
-                  <h4 class="rating__company-name">Студия Ремонтов</h4>
-                  <p>studia-remontov.ru</p>
-                  <p>+7 (945) 414-24-40</p>
-                </div>
+                <a class="rating__item-link" href="https://studia-remontov.ru" target="_blank">
+                  <div class="rating__text">
+                    <img class="rating__img" src="img/logo-studia-small.svg"
+                  alt="Логотип компании" title="Логотип компании">
+                    <h4 class="rating__company-name">Студия Ремонтов</h4>
+                    <p class="rating__underline">studia-remontov.ru</p>
+                    <p>+7 (945) 414-24-40</p>
+                  </div>
+                </a>
               </div>
               <div class="rating__item">
                 <h3 class="rating__subtitle rating__subtitle--intro">Оценка</h3>
@@ -113,7 +117,7 @@
               </div>
               <div class="rating__item">
                 <h3 class="rating__subtitle rating__subtitle--intro">Отзывы</h3>
-                <p class="rating__value rating__value--buble">150 отзывов</p>
+                <p class="rating__value rating__value--buble"><a class="rating__link-reviews" href="#">150 отзывов</a></p>
               </div>
             </div>
             <input id="first-item" class="rating__check" type="checkbox">
@@ -123,11 +127,15 @@
             <div class="rating__desk">
               <div class="rating__item">
                 <h3 class="rating__subtitle rating__subtitle--intro">Компания</h3>
-                <div class="rating__text">
-                  <h4 class="rating__company-name">Студия Ремонтов</h4>
-                  <p>studia-remontov.ru</p>
-                  <p>+7 (945) 414-24-40</p>
-                </div>
+                <a class="rating__item-link" href="https://studia-remontov.ru" target="_blank">
+                  <div class="rating__text">
+                    <img class="rating__img" src="img/logo-studia-small.svg"
+                  alt="Логотип компании" title="Логотип компании">
+                    <h4 class="rating__company-name">Студия Ремонтов</h4>
+                    <p class="rating__underline">studia-remontov.ru</p>
+                    <p>+7 (945) 414-24-40</p>
+                  </div>
+                </a>
               </div>
               <div class="rating__item">
                 <h3 class="rating__subtitle rating__subtitle--intro">Оценка</h3>
@@ -139,7 +147,7 @@
               </div>
               <div class="rating__item">
                 <h3 class="rating__subtitle rating__subtitle--intro">Отзывы</h3>
-                <p class="rating__value rating__value--buble">150 отзывов</p>
+                <p class="rating__value rating__value--buble"><a class="rating__link-reviews" href="#">1500 отзывов</a></p>
               </div>
             </div>
             <input id="second-item" class="rating__check" type="checkbox">
@@ -149,11 +157,15 @@
             <div class="rating__desk">
               <div class="rating__item">
                 <h3 class="rating__subtitle rating__subtitle--intro">Компания</h3>
-                <div class="rating__text">
-                  <h4 class="rating__company-name">Студия Ремонтов</h4>
-                  <p>studia-remontov.ru</p>
-                  <p>+7 (945) 414-24-40</p>
-                </div>
+                <a class="rating__item-link" href="https://studia-remontov.ru" target="_blank">
+                  <div class="rating__text">
+                    <img class="rating__img" src="img/logo-studia-small.svg"
+                  alt="Логотип компании" title="Логотип компании">
+                    <h4 class="rating__company-name">Студия Ремонтов</h4>
+                    <p class="rating__underline">studia-remontov.ru</p>
+                    <p>+7 (945) 414-24-40</p>
+                  </div>
+                </a>
               </div>
               <div class="rating__item">
                 <h3 class="rating__subtitle rating__subtitle--intro">Оценка</h3>
@@ -165,7 +177,7 @@
               </div>
               <div class="rating__item">
                 <h3 class="rating__subtitle rating__subtitle--intro">Отзывы</h3>
-                <p class="rating__value rating__value--buble">150 отзывов</p>
+                <p class="rating__value rating__value--buble"><a class="rating__link-reviews" href="#">150 отзывов</a></p>
               </div>
             </div>
             <input id="third-item" class="rating__check" type="checkbox">
@@ -175,11 +187,15 @@
             <div class="rating__desk">
               <div class="rating__item">
                 <h3 class="rating__subtitle rating__subtitle--intro">Компания</h3>
-                <div class="rating__text">
-                  <h4 class="rating__company-name">Студия Ремонтов</h4>
-                  <p>studia-remontov.ru</p>
-                  <p>+7 (945) 414-24-40</p>
-                </div>
+                <a class="rating__item-link" href="https://studia-remontov.ru" target="_blank">
+                  <div class="rating__text">
+                    <img class="rating__img" src="img/logo-studia-small.svg"
+                  alt="Логотип компании" title="Логотип компании">
+                    <h4 class="rating__company-name">Студия Ремонтов</h4>
+                    <p class="rating__underline">studia-remontov.ru</p>
+                    <p>+7 (945) 414-24-40</p>
+                  </div>
+                </a>
               </div>
               <div class="rating__item">
                 <h3 class="rating__subtitle rating__subtitle--intro">Оценка</h3>
@@ -191,7 +207,7 @@
               </div>
               <div class="rating__item">
                 <h3 class="rating__subtitle rating__subtitle--intro">Отзывы</h3>
-                <p class="rating__value rating__value--buble">150 отзывов</p>
+                <p class="rating__value rating__value--buble"><a class="rating__link-reviews" href="#">150 отзывов</a></p>
               </div>
             </div>
             <input id="fourth-item" class="rating__check" type="checkbox">
@@ -201,11 +217,15 @@
             <div class="rating__desk">
               <div class="rating__item">
                 <h3 class="rating__subtitle rating__subtitle--intro">Компания</h3>
-                <div class="rating__text">
-                  <h4 class="rating__company-name">Студия Ремонтов</h4>
-                  <p>studia-remontov.ru</p>
-                  <p>+7 (945) 414-24-40</p>
-                </div>
+                <a class="rating__item-link" href="https://studia-remontov.ru" target="_blank">
+                  <div class="rating__text">
+                    <img class="rating__img" src="img/logo-studia-small.svg"
+                  alt="Логотип компании" title="Логотип компании">
+                    <h4 class="rating__company-name">Студия Ремонтов</h4>
+                    <p class="rating__underline">studia-remontov.ru</p>
+                    <p>+7 (945) 414-24-40</p>
+                  </div>
+                </a>
               </div>
               <div class="rating__item">
                 <h3 class="rating__subtitle rating__subtitle--intro">Оценка</h3>
@@ -217,7 +237,7 @@
               </div>
               <div class="rating__item">
                 <h3 class="rating__subtitle rating__subtitle--intro">Отзывы</h3>
-                <p class="rating__value rating__value--buble">150 отзывов</p>
+                <p class="rating__value rating__value--buble"><a class="rating__link-reviews" href="#">150 отзывов</a></p>
               </div>
             </div>
             <input id="fifth-item" class="rating__check" type="checkbox">
@@ -230,10 +250,10 @@
     <section class="feedback">
       <div class="feedback__wrapper">
         <h2 class="feedback__title">Необходима консультация в <span class="feedback__br-tablet">выборе <span class="feedback__br-desktop">компании?</span></span></h2>
-        <form class="feedback__form">
+        <form class="feedback__form" method="post" action="#" id="callBack">
           <label class="feedback__phone" for="phone">Мы вам перезвоним и ответим на все ваши вопросы</label>
           <input class="feedback__input" type="tel" id="phone" name="phone" pattern="\+7\[0-9]{3}\s?\[0-9]{3}\s?\[0-9]{2}\s?\[0-9]{2}" required placeholder="+7(XХХ) ХХХ ХХ ХХ">
-          <button type="submit" class="feedback__button">Перезвоните мне</button>
+          <button type="submit" class="feedback__button btn-valid">Перезвоните мне</button>
         </form>
       </div>
     </section>
@@ -253,7 +273,7 @@
       <div class="footer__nav">
         <h3 class="footer__subtitle">Сравнить</h3>
         <ul class="footer__list">
-          <li class="footer__item"><a class="footer__link" href="#">Сравнить компании</a></li>
+          <li class="footer__item"><a class="footer__link" href="compare.html">Сравнить компании</a></li>
           <li class="footer__item"><a class="footer__link" href="#">Сравнить все</a></li>
           <li class="footer__item"><a class="footer__link" href="#">Выбрать для сравнения</a></li>
         </ul>
@@ -263,7 +283,7 @@
         <ul class="footer__list">
           <li class="footer__item"><a class="footer__link" href="article.html">Как выбрать</a></li>
           <li class="footer__item"><a class="footer__link" href="#">Компании</a></li>
-          <li class="footer__item"><a class="footer__link" href="#">О нас</a></li>
+          <li class="footer__item"><a class="footer__link" href="company.html">О нас</a></li>
         </ul>
       </div>
       <a class="footer__logo" href="#top">

@@ -2,9 +2,9 @@
 <html class="page" lang="ru">
 
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Собираетесь делать ремонт? Мы хотим помочь вам сделать выбор компании!</title>
     <meta name="description" content="Собираетесь делать ремонт? Мы хотим помочь вам сделать выбор компании!">
     <meta name="keywords" content="рейтинг, аналитика">
@@ -28,14 +28,14 @@
                             <ul class="navigation__sub-list">
                                 <li><a href="#">Топ по надежности</a></li>
                                 <li><a href="rating.html">Топ компаний</a></li>
-                                <li><a href="#">Создать свой рейтинг</a></li>
+                                <li>Создать свой рейтинг</li>
                             </ul>
                         </li>
                         <li class="navigation__item navigation__dropdown">
                             <span class="navigation__link">Сравнить</span>
                             <span class="navigation__btn"></span>
                             <ul class="navigation__sub-list">
-                                <li><a href="#">Сравнить компании</a></li>
+                                <li><a href="compare.html">Сравнить компании</a></li>
                                 <li><a href="#">Сравнить все</a></li>
                                 <li><a href="#">Выбрать для сравнения</a></li>  
                             </ul>
@@ -44,7 +44,7 @@
                             <a class="navigation__link" href="article.html">Как выбрать</a>
                         </li>
                         <li class="navigation__item">
-                            <a class="navigation__link" href="#">О нас</a>
+                            <a class="navigation__link" href="company.html">О нас</a>
                         </li>
                     </ul>
                 </nav>
@@ -56,20 +56,20 @@
             <div class="onboarding__wrapper">
                 <h1 class="visually-hidden">Составьте свой рейтинг компаний</h1>
                 <form class="onboarding__form" id="formSum" method="post">
-                    <fieldset class="onboarding__item">
+                    <fieldset id="step0" class="onboarding__item">
                         <legend class="onboarding__title">Какую сумму вы планируете потратить на ремонт?</legend>
                         <p class="onboarding__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                         <div class="onboarding__input-block">
-                            <input type="text" placeholder="Сумма" class="onboarding__input onboarding__input--small" min="5" name="sum" id="sumSmall" required>
-                            <input type="text" placeholder="Какую сумму вы можете потратить на ремонт?" class="onboarding__input onboarding__input--large" min="5" name="sum" id="sumLarge" required>
+                            <input type="number" placeholder="Сумма" class="onboarding__input onboarding__input--small" min="5" name="sum" id="sumSmall" required>
+                           <!--<input type="number" placeholder="Какую сумму вы можете потратить на ремонт?" class="onboarding__input onboarding__input--large" min="5" name="sum" id="sumLarge" required>--> 
                             <span class="onboarding__decor">Сумма</span>
                         </div>
                         <div class="onboarding__btn onboarding__btn--block">
-                            <button type="submit" class="onboarding__btn-prev">Назад</button>
-                            <button type="submit" class="onboarding__btn-next">Дальше</button>
+                            <button type="button" class="onboarding__btn-prev" disabled>Назад</button>
+                            <button type="button" id="to-step1" class="onboarding__btn-next not_submit btn-valid">Дальше</button>
                         </div>
                     </fieldset>
-                    <fieldset class="onboarding__item">
+                    <fieldset id="step1" class="onboarding__item">
                         <legend class="onboarding__title">Компании с каким количеством отзывом показать?</legend>
                         <div class="onboarding__input-block">
                             <p class="onboarding__input-desc onboarding__input-desc--small">
@@ -90,11 +90,11 @@
                             </p>
                         </div>
                         <div class="onboarding__btn onboarding__btn--radio">
-                            <button type="submit" class="onboarding__btn-prev">Назад</button>
-                            <button type="submit" class="onboarding__btn-next">Дальше</button>
+                            <button type="button" id="back-step0" class="onboarding__btn-prev">Назад</button>
+                            <button type="button" id="to-step2" class="onboarding__btn-next not_submit">Дальше</button>
                         </div>
                     </fieldset>
-                    <fieldset class="onboarding__item">
+                    <fieldset id="step2" class="onboarding__item">
                         <legend class="onboarding__title">Сколько времени вы планируете потратить на ремонт?</legend>
                         <div class="onboarding__input-block">
                             <p class="onboarding__input-desc">
@@ -111,11 +111,11 @@
                         </p>
                         </div>
                         <div class="onboarding__btn onboarding__btn--radio">
-                            <button type="submit" class="onboarding__btn-prev">Назад</button>
-                            <button type="submit" class="onboarding__btn-next">Дальше</button>
+                            <button type="button" id="back-step1" class="onboarding__btn-prev">Назад</button>
+                            <button type="button" id="to-step3" class="onboarding__btn-next not_submit">Дальше</button>
                         </div>
                     </fieldset>
-                    <fieldset class="onboarding__item">
+                    <fieldset id="step3" class="onboarding__item">
                         <legend class="onboarding__title">Какие критерии самые значимые при выборе компании?</legend>
                         <div class="onboarding__input-block onboarding__input-block--checkbox">
                             <p class="onboarding__input-desc onboarding__input-desc--checkbox">
@@ -144,8 +144,8 @@
                             </p>
                         </div>
                         <div class="onboarding__btn onboarding__btn--checkbox">
-                            <button type="submit" class="onboarding__btn-prev">Назад</button>
-                            <a href="ratingcustom.html" class="onboarding__btn-next">Дальше</a>
+                            <button type="button" id="back-step2" class="onboarding__btn-prev">Назад</button>
+                            <a href="ratingcustom.html" class="onboarding__btn-next" id="submit">Дальше</a>
                         </div>
                     </fieldset>
                 </form>
@@ -169,7 +169,7 @@
                 <div class="footer__nav">
                     <h3 class="footer__subtitle">Сравнить</h3>
                     <ul class="footer__list">
-                        <li class="footer__item"><a class="footer__link" href="#">Сравнить компании</a>
+                        <li class="footer__item"><a class="footer__link" href="compare.html">Сравнить компании</a>
                         </li>
                         <li class="footer__item"><a class="footer__link" href="#">Сравнить все</a></li>
                         <li class="footer__item"><a class="footer__link" href="#">Выбрать для
@@ -181,7 +181,7 @@
                     <ul class="footer__list">
                         <li class="footer__item"><a class="footer__link" href="article.html">Как выбрать</a></li>
                         <li class="footer__item"><a class="footer__link" href="#">Компании</a></li>
-                        <li class="footer__item"><a class="footer__link" href="#">О нас</a></li>
+                        <li class="footer__item"><a class="footer__link" href="company.html">О нас</a></li>
                     </ul>
                 </div>
                 <a class="footer__logo" href="index.html">
